@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- 1. 로그인 이미지 로고 -->
+
+    <!-- 2. 아이디 입력 -->
+
+    <!-- 3. 비밀번호 입력 -->
+
+    <!-- 4. 아이디 찾기 텍스트 -->
+
+    <!-- 5. 로그인 버튼 이미지 -->
+
+    <!-- 6. 회원가입 버튼 이미지 -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="168dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="140dp"
+        android:contentDescription="로그인 로고"
+        android:src="@drawable/loginlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/bg_input_rounded"
+        android:hint="아이디를 입력해주세요"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input_rounded"
+        android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etId" />
+
+    <TextView
+        android:id="@+id/tvFindId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="아이디를 잊으셨나요?"
+        android:textColor="#0055CC"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPw" />
+
+    <ImageView
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:contentDescription="로그인 버튼"
+        android:focusable="true"
+        android:src="@drawable/loginup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFindId" />
+
+    <ImageView
+        android:id="@+id/btnSignup"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:src="@drawable/signupup"
+        android:contentDescription="회원가입 버튼"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
