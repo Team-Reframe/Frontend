@@ -1,0 +1,3 @@
+com.example.reframe.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

@@ -1,0 +1,6 @@
+com.example.reframe.test.app-core-1.6.1-0 C:\Users\dnwls\.gradle\caches\8.10.2\transforms\a063c24b0760f65f2566b21e6085b633\transformed\core-1.6.1\res
+com.example.reframe.test.app-tracing-1.2.0-1 C:\Users\dnwls\.gradle\caches\8.10.2\transforms\fbee55af539392b29ba012ca8de26051\transformed\tracing-1.2.0\res
+com.example.reframe.test.app-androidTest-2 C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\generated\res\resValues\androidTest\debug
+com.example.reframe.test.app-mergeDebugAndroidTestResources-3 C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.reframe.test.app-mergeDebugAndroidTestResources-4 C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.reframe.test.app-debugAndroidTest-5 C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
