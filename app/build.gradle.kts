@@ -7,6 +7,10 @@ android {
     namespace = "com.example.reframe"
     compileSdk = 35
 
+    viewBinding{
+        enable = true
+    }
+
     defaultConfig {
         applicationId = "com.example.reframe"
         minSdk = 34
