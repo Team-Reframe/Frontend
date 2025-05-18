@@ -1,0 +1,2 @@
+05-17 12:45:21.229  4765  4815 I TestRunner: started: useAppContext(com.example.reframe.ExampleInstrumentedTest)
+05-17 12:45:21.233  4765  4815 I TestRunner: finished: useAppContext(com.example.reframe.ExampleInstrumentedTest)

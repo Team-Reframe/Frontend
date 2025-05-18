@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.reframe.ExampleInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="1.114" timestamp="2025-05-17T12:45:24" hostname="localhost">
+  <properties>
+    <property name="device" value="kotiln(AVD) - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="useAppContext" classname="com.example.reframe.ExampleInstrumentedTest" time="0.012" />
+</testsuite>

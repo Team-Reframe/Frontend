@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF"
+    tools:context=".SignupSuccessActivity">
+
+    <!-- 상단 완료 이미지 -->
+
+    <!-- 영수증 이미지 -->
+
+    <!-- Re:Ceipt 로고 -->
+
+    <!-- 시작하기 버튼 (이미지로 교체됨) -->
+
+    <ImageView
+        android:id="@+id/ivSuccessTitle"
+        android:layout_width="303dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="회원가입 완료 이미지"
+        android:src="@drawable/signup_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 영수증 이미지 -->
+
+
+    <!-- 로고 이미지 (ivLogo가 반드시 있어야 함) -->
+
+
+    <ImageView
+        android:id="@+id/receiptImage"
+        android:layout_width="138dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="180dp"
+        android:contentDescription="영수증 이미지"
+        android:src="@drawable/receipt_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivSuccessTitle" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/re_ceipt_logo"
+        app:layout_constraintTop_toBottomOf="@id/receiptImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:clickable="true"
+        android:contentDescription="시작하기 버튼"
+        android:focusable="true"
+        android:src="@drawable/start_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

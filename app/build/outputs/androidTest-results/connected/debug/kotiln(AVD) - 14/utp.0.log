@@ -1,0 +1,39 @@
+정보: Constructing runner from config.
+정보: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.example.reframe"
+    test_package: "com.example.reframe.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.example.reframe/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+정보: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "C:\\Users\\dnwls\\AndroidStudioProjects\\Reframe\\app\\build\\intermediates\\apk\\debug\\app-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "C:\\Users\\dnwls\\AndroidStudioProjects\\Reframe\\app\\build\\intermediates\\apk\\androidTest\\debug\\app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+정보: No installables found in test fixture. Nothing to install.
+정보: Installing [C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\intermediates\apk\debug\app-debug.apk] on device emulator-5554.
+정보: Installing [C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\intermediates\apk\androidTest\debug\app-debug-androidTest.apk] on device emulator-5554.
+정보: Start logcat streaming.
+정보: Running Android Instrumentation driver.
+정보: Copying files from device to host: /sdcard/Android/media/com.example.reframe/additional_test_output to C:\Users\dnwls\AndroidStudioProjects\Reframe\app\build\outputs\connected_android_test_additional_output\debugAndroidTest\connected\kotiln(AVD) - 14
+정보: Stop logcat streaming.
+정보: Uninstalling com.example.reframe for device emulator-5554.
+정보: Uninstalling com.example.reframe.test for device emulator-5554.
+정보: Execute com.example.reframe.ExampleInstrumentedTest.useAppContext: PASSED
