@@ -4,20 +4,20 @@
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_home.xml"
     },
     {
-        "merged": "com.example.reframe.app-mergeDebugResources-32:/layout/activity_login.xml",
-        "source": "com.example.reframe.app-main-35:/layout/activity_login.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-32:/layout/activity_signup_success.xml",
+        "source": "com.example.reframe.app-main-35:/layout/activity_signup_success.xml"
+    },
+    {
+        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_signup_success.xml",
+        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup_success.xml"
     },
     {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_login.xml",
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_splash2.xml",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_splash2.xml"
     },
     {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-32:\\layout\\activity_splash.xml",

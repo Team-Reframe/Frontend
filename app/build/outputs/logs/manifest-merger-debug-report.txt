@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-44:12
-INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-44:12
+ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-41:12
+INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:1-41:12
 MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\84c0b0383950f37228a76384addaadba\transformed\viewbinding-8.8.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\b5c5220313ab1da87eb39cad8c2e1f16\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
@@ -58,8 +58,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\dnwls\.
 	xmlns:android
 		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:1:11-69
 application
-ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:4:5-42:19
-INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:4:5-42:19
+ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:4:5-39:19
+INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:4:5-39:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\dnwls\.gradle\caches\8.10.2\transforms\b5c5220313ab1da87eb39cad8c2e1f16\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -120,24 +120,20 @@ ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidMani
 		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:28:13-36
 	android:name
 		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:27:13-42
-activity#com.example.reframe.Splash2Activity
-ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:30:9-32:39
-	android:exported
-		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:32:13-36
+activity#com.example.reframe.HomeActivity
+ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:30:9-50
 	android:name
-		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:31:13-44
+		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:30:19-47
+activity#com.example.reframe.SignupSuccessActivity
+ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:32:9-59
+	android:name
+		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:32:19-56
 activity#com.example.reframe.SignupActivity
 ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:34:9-35:38
 	android:exported
 		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:35:13-36
 	android:name
 		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:34:19-49
-activity#com.example.reframe.MainActivity
-ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:39:9-41:39
-	android:exported
-		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:41:13-36
-	android:name
-		ADDED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml:40:13-41
 uses-sdk
 INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\dnwls\AndroidStudioProjects\Reframe\app\src\main\AndroidManifest.xml

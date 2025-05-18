@@ -4,6 +4,7 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,10 +21,15 @@ public final class ActivitySignupBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnSignupComplete;
+
+  @NonNull
   public final TextView signupTitle;
 
-  private ActivitySignupBinding(@NonNull ConstraintLayout rootView, @NonNull TextView signupTitle) {
+  private ActivitySignupBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button btnSignupComplete, @NonNull TextView signupTitle) {
     this.rootView = rootView;
+    this.btnSignupComplete = btnSignupComplete;
     this.signupTitle = signupTitle;
   }
 
@@ -54,13 +60,19 @@ public final class ActivitySignupBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnSignupComplete;
+      Button btnSignupComplete = ViewBindings.findChildViewById(rootView, id);
+      if (btnSignupComplete == null) {
+        break missingId;
+      }
+
       id = R.id.signupTitle;
       TextView signupTitle = ViewBindings.findChildViewById(rootView, id);
       if (signupTitle == null) {
         break missingId;
       }
 
-      return new ActivitySignupBinding((ConstraintLayout) rootView, signupTitle);
+      return new ActivitySignupBinding((ConstraintLayout) rootView, btnSignupComplete, signupTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

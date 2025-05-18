@@ -3123,7 +3123,9 @@ drawable passwd_input
 drawable re_ceipt_logo
 drawable receipt_image
 drawable signup
+drawable signup_success
 drawable signupup
+drawable start_logo
 drawable start_notice
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3231,6 +3233,8 @@ id bounceEnd
 id bounceStart
 id btnLogin
 id btnSignup
+id btnSignupComplete
+id btnStart
 id buttonContainer
 id buttonLogin
 id buttonPanel
@@ -3239,6 +3243,8 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
+id cbAutoLogin
+id cbSaveId
 id center
 id centerCrop
 id centerInside
@@ -3248,6 +3254,7 @@ id chain
 id chain2
 id chains
 id checkbox
+id checkboxContainer
 id checked
 id chronometer
 id circle_center
@@ -3351,6 +3358,7 @@ id hide_ime_id
 id hideable
 id home
 id homeAsUp
+id homeLayout
 id honorRequest
 id horizontal
 id horizontal_only
@@ -3368,6 +3376,8 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivLogo
+id ivSuccessTitle
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3382,7 +3392,6 @@ id listMode
 id list_item
 id logoImage
 id m3_side_sheet
-id main
 id mainContent
 id marquee
 id masked
@@ -3552,7 +3561,6 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
-id splash2Layout
 id splashRoot
 id spline
 id split_action_bar
@@ -3627,6 +3635,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvFindId
+id tvWelcome
 id unchecked
 id uniform
 id unlabeled
@@ -3766,11 +3775,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_home
 layout activity_login
-layout activity_main
 layout activity_signup
+layout activity_signup_success
 layout activity_splash
-layout activity_splash2
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

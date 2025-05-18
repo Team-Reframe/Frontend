@@ -4,8 +4,10 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,6 +30,15 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final ImageView btnSignup;
 
   @NonNull
+  public final CheckBox cbAutoLogin;
+
+  @NonNull
+  public final CheckBox cbSaveId;
+
+  @NonNull
+  public final LinearLayout checkboxContainer;
+
+  @NonNull
   public final EditText etId;
 
   @NonNull
@@ -40,11 +51,15 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final TextView tvFindId;
 
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnLogin,
-      @NonNull ImageView btnSignup, @NonNull EditText etId, @NonNull EditText etPw,
+      @NonNull ImageView btnSignup, @NonNull CheckBox cbAutoLogin, @NonNull CheckBox cbSaveId,
+      @NonNull LinearLayout checkboxContainer, @NonNull EditText etId, @NonNull EditText etPw,
       @NonNull ImageView logoImage, @NonNull TextView tvFindId) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
     this.btnSignup = btnSignup;
+    this.cbAutoLogin = cbAutoLogin;
+    this.cbSaveId = cbSaveId;
+    this.checkboxContainer = checkboxContainer;
     this.etId = etId;
     this.etPw = etPw;
     this.logoImage = logoImage;
@@ -90,6 +105,24 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cbAutoLogin;
+      CheckBox cbAutoLogin = ViewBindings.findChildViewById(rootView, id);
+      if (cbAutoLogin == null) {
+        break missingId;
+      }
+
+      id = R.id.cbSaveId;
+      CheckBox cbSaveId = ViewBindings.findChildViewById(rootView, id);
+      if (cbSaveId == null) {
+        break missingId;
+      }
+
+      id = R.id.checkboxContainer;
+      LinearLayout checkboxContainer = ViewBindings.findChildViewById(rootView, id);
+      if (checkboxContainer == null) {
+        break missingId;
+      }
+
       id = R.id.etId;
       EditText etId = ViewBindings.findChildViewById(rootView, id);
       if (etId == null) {
@@ -114,8 +147,8 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnSignup, etId, etPw,
-          logoImage, tvFindId);
+      return new ActivityLoginBinding((ConstraintLayout) rootView, btnLogin, btnSignup, cbAutoLogin,
+          cbSaveId, checkboxContainer, etId, etPw, logoImage, tvFindId);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

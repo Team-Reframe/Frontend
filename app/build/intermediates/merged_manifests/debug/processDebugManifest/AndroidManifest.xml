@@ -42,17 +42,10 @@
         <activity
             android:name="com.example.reframe.LoginActivity"
             android:exported="true" />
-        <!-- 스플래시 후 로그인 화면 -->
-        <activity
-            android:name="com.example.reframe.Splash2Activity"
-            android:exported="true" />
+        <activity android:name="com.example.reframe.HomeActivity" />
+        <activity android:name="com.example.reframe.SignupSuccessActivity" />
         <activity
             android:name="com.example.reframe.SignupActivity"
-            android:exported="true" />
-
-        <!-- MainActivity는 일반 화면 -->
-        <activity
-            android:name="com.example.reframe.MainActivity"
             android:exported="true" />
 
         <provider
