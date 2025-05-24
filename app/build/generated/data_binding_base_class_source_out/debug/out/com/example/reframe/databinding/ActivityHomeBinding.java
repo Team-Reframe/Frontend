@@ -4,37 +4,48 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final ConstraintLayout homeLayout;
+  public final BottomNavigationView bottomNavigation;
+
+  @NonNull
+  public final FrameLayout container;
+
+  @NonNull
+  public final CoordinatorLayout homeLayout;
 
   @NonNull
   public final TextView tvWelcome;
 
-  private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout homeLayout, @NonNull TextView tvWelcome) {
+  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout container,
+      @NonNull CoordinatorLayout homeLayout, @NonNull TextView tvWelcome) {
     this.rootView = rootView;
+    this.bottomNavigation = bottomNavigation;
+    this.container = container;
     this.homeLayout = homeLayout;
     this.tvWelcome = tvWelcome;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -59,7 +70,19 @@ public final class ActivityHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout homeLayout = (ConstraintLayout) rootView;
+      id = R.id.bottom_navigation;
+      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigation == null) {
+        break missingId;
+      }
+
+      id = R.id.container;
+      FrameLayout container = ViewBindings.findChildViewById(rootView, id);
+      if (container == null) {
+        break missingId;
+      }
+
+      CoordinatorLayout homeLayout = (CoordinatorLayout) rootView;
 
       id = R.id.tvWelcome;
       TextView tvWelcome = ViewBindings.findChildViewById(rootView, id);
@@ -67,7 +90,8 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHomeBinding((ConstraintLayout) rootView, homeLayout, tvWelcome);
+      return new ActivityHomeBinding((CoordinatorLayout) rootView, bottomNavigation, container,
+          homeLayout, tvWelcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,174 +1,242 @@
 [
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_login.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\login.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_start_logo.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\start_logo.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_slide_down_slow.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\slide_down_slow.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_start_logo.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\start_logo.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\fade_in.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signup_success.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signup_success.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_map.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_map.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_start_notice.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\start_notice.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_fade_in_slow.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\fade_in_slow.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_input_line.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_input_line.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signup.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signup.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_signup_success.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup_success.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_re_ceipt_logo.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\re_ceipt_logo.png"
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_main.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_input_line.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_input_line.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_login.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\login.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.reframe.app-debug-33:/layout_activity_signup_success.xml.flat",
-        "source": "com.example.reframe.app-main-35:/layout/activity_signup_success.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_button_outline_blue.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\button_outline_blue.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signupup.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signupup.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_signup.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_map.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_map.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_signup.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-anydpi\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_button_outline_blue.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\button_outline_blue.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_id_input.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\id_input.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signup_success.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signup_success.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_input_rounded.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_input_rounded.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_loginlogo.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\loginlogo.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_loginup.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\loginup.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_passwd_input.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\passwd_input.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_slide_down.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\slide_down.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_slide_down_slow.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\slide_down_slow.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_scale_up.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\scale_up.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_signup_success.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_signup_success.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_receipt_image.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\receipt_image.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signup.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signup.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_signupup.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\signupup.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_home.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_fade_in.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\fade_in.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_receipt.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_receipt.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_signup_border.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_signup_border.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_receipt_image.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\receipt_image.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_signup_border.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_signup_border.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_map.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_map.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_scale_up.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\scale_up.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_scanner.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_scanner.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_passwd_input.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\passwd_input.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_loginlogo.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\loginlogo.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_loginup.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\loginup.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_id_input.png.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\id_input.png"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-anydpi\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_person.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_person.png"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_login.xml"
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_profile.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_receipt.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_receipt.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_ic_home.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\ic_home.png"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-33:/color_bottom_nav_icon_selector.xml.flat",
+        "source": "com.example.reframe.app-main-35:/color/bottom_nav_icon_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_bg_input_rounded.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\bg_input_rounded.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_scanner.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_scanner.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_scanner.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_scanner.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_fade_in_slow.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\fade_in_slow.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_start_notice.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\start_notice.png"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-33:/layout_activity_home.xml.flat",
+        "source": "com.example.reframe.app-main-35:/layout/activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\layout_activity_receipt.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\layout\\activity_receipt.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\anim_slide_down.xml.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\anim\\slide_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-debug-33:\\drawable_re_ceipt_logo.png.flat",
+        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-35:\\drawable\\re_ceipt_logo.png"
     }
 ]

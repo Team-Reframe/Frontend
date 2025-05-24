@@ -16,26 +16,22 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 스플래시 전 로그인 화면-->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
 
-        <activity android:name=".HomeActivity" />
-
-        <activity android:name=".SignupSuccessActivity" />
-
-        <activity android:name=".SignupActivity"
-            android:exported="true"/>
-
-
-
+        <!-- 기타 액티비티들 -->
+        <activity android:name=".LoginActivity" android:exported="true" />
+        <activity android:name=".HomeActivity" android:exported="true" />
+        <activity android:name=".SignupSuccessActivity" android:exported="true" />
+        <activity android:name=".SignupActivity" android:exported="true" />
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".MapActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".ReceiptActivity" android:exported="true" />
+        <activity android:name=".ScannerActivity" android:exported="true" />
     </application>
-
 </manifest>
+

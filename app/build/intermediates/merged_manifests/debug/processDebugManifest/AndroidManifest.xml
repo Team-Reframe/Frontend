@@ -38,14 +38,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 스플래시 전 로그인 화면 -->
+
+        <!-- 기타 액티비티들 -->
         <activity
             android:name="com.example.reframe.LoginActivity"
             android:exported="true" />
-        <activity android:name="com.example.reframe.HomeActivity" />
-        <activity android:name="com.example.reframe.SignupSuccessActivity" />
+        <activity
+            android:name="com.example.reframe.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.SignupSuccessActivity"
+            android:exported="true" />
         <activity
             android:name="com.example.reframe.SignupActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.MapActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.ReceiptActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.reframe.ScannerActivity"
             android:exported="true" />
 
         <provider
