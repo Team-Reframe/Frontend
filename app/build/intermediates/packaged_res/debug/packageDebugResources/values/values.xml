@@ -5,6 +5,7 @@
     <color name="bottom_nav_icon_color_selected">#FF004098</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Reframe</string>
+    <string name="bottom_sheet_title">AI 추천 리스트</string>
     <style name="Base.Theme.Reframe" parent="Theme.Material3.DayNight.NoActionBar">
         
     </style>

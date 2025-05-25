@@ -18,6 +18,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,6 +42,9 @@ android {
 }
 
 dependencies {
+
+    implementation("com.kakao.maps.open:android:2.12.8")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

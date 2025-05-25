@@ -5,42 +5,59 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kakao.vectormap.MapView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityMapBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final FrameLayout container;
+  public final LinearLayout bottomSheet;
 
   @NonNull
-  public final CoordinatorLayout homeLayout;
+  public final TextView bottomSheetTitle;
 
-  private ActivityMapBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout container,
-      @NonNull CoordinatorLayout homeLayout) {
+  @NonNull
+  public final MapView mapView;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final RecyclerView recommendList;
+
+  private ActivityMapBinding(@NonNull FrameLayout rootView,
+      @NonNull BottomNavigationView bottomNavigation, @NonNull LinearLayout bottomSheet,
+      @NonNull TextView bottomSheetTitle, @NonNull MapView mapView,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView recommendList) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
-    this.container = container;
-    this.homeLayout = homeLayout;
+    this.bottomSheet = bottomSheet;
+    this.bottomSheetTitle = bottomSheetTitle;
+    this.mapView = mapView;
+    this.progressBar = progressBar;
+    this.recommendList = recommendList;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -71,16 +88,38 @@ public final class ActivityMapBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.container;
-      FrameLayout container = ViewBindings.findChildViewById(rootView, id);
-      if (container == null) {
+      id = R.id.bottom_sheet;
+      LinearLayout bottomSheet = ViewBindings.findChildViewById(rootView, id);
+      if (bottomSheet == null) {
         break missingId;
       }
 
-      CoordinatorLayout homeLayout = (CoordinatorLayout) rootView;
+      id = R.id.bottom_sheet_title;
+      TextView bottomSheetTitle = ViewBindings.findChildViewById(rootView, id);
+      if (bottomSheetTitle == null) {
+        break missingId;
+      }
 
-      return new ActivityMapBinding((CoordinatorLayout) rootView, bottomNavigation, container,
-          homeLayout);
+      id = R.id.map_view;
+      MapView mapView = ViewBindings.findChildViewById(rootView, id);
+      if (mapView == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.recommend_list;
+      RecyclerView recommendList = ViewBindings.findChildViewById(rootView, id);
+      if (recommendList == null) {
+        break missingId;
+      }
+
+      return new ActivityMapBinding((FrameLayout) rootView, bottomNavigation, bottomSheet,
+          bottomSheetTitle, mapView, progressBar, recommendList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

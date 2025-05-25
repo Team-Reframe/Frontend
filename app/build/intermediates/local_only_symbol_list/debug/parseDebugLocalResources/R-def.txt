@@ -28,12 +28,15 @@ drawable loginup
 drawable passwd_input
 drawable re_ceipt_logo
 drawable receipt_image
+drawable red_dot_marker
 drawable signup
 drawable signup_success
 drawable signupup
 drawable start_logo
 drawable start_notice
 id bottom_navigation
+id bottom_sheet
+id bottom_sheet_title
 id btnLogin
 id btnSignup
 id btnSignupComplete
@@ -52,6 +55,7 @@ id ivLogo
 id ivSuccessTitle
 id logoImage
 id mainContent
+id map_view
 id nav_home
 id nav_host_fragment
 id nav_map
@@ -59,7 +63,9 @@ id nav_profile
 id nav_receipt
 id nav_scanner
 id noticeImage
+id progressBar
 id receiptImage
+id recommend_list
 id signupTitle
 id splashRoot
 id tvFindId
@@ -78,6 +84,7 @@ menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string bottom_sheet_title
 style Base.Theme.Reframe
 style BottomNavTheme
 style Theme.Reframe
