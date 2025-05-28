@@ -1,34 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FFFFFF">
+    android:background="#F6F7F9"
+    android:padding="24dp">
 
+    <!-- 상단 타이틀 -->
     <TextView
         android:id="@+id/signupTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입"
-        android:textSize="24sp"
+        android:text="정보를 입력해주세요"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp" />
+        android:textSize="22sp"
+        android:layout_marginBottom="24dp"
+        android:textColor="#222"/>
 
-    <Button
-        android:id="@+id/btnSignupComplete"
+    <!-- 이름 -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="회원가입 완료"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#0077CC"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/signupTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="이름"
+        android:textStyle="bold"
+        android:textColor="#1976D2"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#1976D2"
+        app:boxStrokeWidth="2dp"
+        android:layout_marginBottom="12dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름을 입력해주세요"
+            android:textColorHint="#B0B0B0"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- 아이디 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textStyle="bold"
+        android:textColor="#1976D2"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#1976D2"
+        app:boxStrokeWidth="2dp"
+        android:layout_marginBottom="12dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력해주세요"
+            android:textColorHint="#B0B0B0"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 비밀번호 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textStyle="bold"
+        android:textColor="#1976D2"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#1976D2"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="password_toggle"
+        android:layout_marginBottom="4dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력해주세요"
+            android:textColorHint="#B0B0B0"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/passwordGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="영어, 특수문자를 포함하여 7자리 이상 입력해주세요."
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 비밀번호 확인 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 확인"
+        android:textStyle="bold"
+        android:textColor="#1976D2"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordCheckLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#1976D2"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="password_toggle"
+        android:layout_marginBottom="4dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPasswordCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 확인해주세요"
+            android:textColorHint="#B0B0B0"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/passwordCheckError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호를 다시 입력해주세요."
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 하단 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="뒤로가기"
+            android:background="@drawable/btn_border"
+            android:textColor="#222"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="다음"
+            android:background="#1976D2"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</LinearLayout>
