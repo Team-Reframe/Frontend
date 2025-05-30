@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bottom_nav_icon_color">#FF000000</color>
     <color name="bottom_nav_icon_color_selected">#FF004098</color>
+    <color name="blue_primary_dark">#004098</color>
+    <color name="blue_primary_light">#005AD5</color>
+    <color name="grey_hint">#888888</color> <!-- 회색 -->
+    <color name="red_error">#D32F2F</color> <!-- 빨간색 -->
 </resources>
