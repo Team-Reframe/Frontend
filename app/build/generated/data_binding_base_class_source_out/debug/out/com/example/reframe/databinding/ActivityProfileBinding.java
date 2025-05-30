@@ -4,7 +4,10 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -24,18 +27,67 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final FrameLayout container;
+  public final ImageButton btnPayment;
 
   @NonNull
-  public final CoordinatorLayout homeLayout;
+  public final ImageView logoImage;
+
+  @NonNull
+  public final TextView menuAccountStatus;
+
+  @NonNull
+  public final TextView menuAlarm;
+
+  @NonNull
+  public final TextView menuCustomer;
+
+  @NonNull
+  public final TextView menuHelp;
+
+  @NonNull
+  public final TextView menuLogout;
+
+  @NonNull
+  public final TextView menuMyInfo;
+
+  @NonNull
+  public final TextView menuPasswordSecurity;
+
+  @NonNull
+  public final TextView menuPointHistory;
+
+  @NonNull
+  public final TextView menuReport;
+
+  @NonNull
+  public final TextView menuWithdrawal;
+
+  @NonNull
+  public final LinearLayout profileContent;
 
   private ActivityProfileBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout container,
-      @NonNull CoordinatorLayout homeLayout) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull ImageButton btnPayment,
+      @NonNull ImageView logoImage, @NonNull TextView menuAccountStatus,
+      @NonNull TextView menuAlarm, @NonNull TextView menuCustomer, @NonNull TextView menuHelp,
+      @NonNull TextView menuLogout, @NonNull TextView menuMyInfo,
+      @NonNull TextView menuPasswordSecurity, @NonNull TextView menuPointHistory,
+      @NonNull TextView menuReport, @NonNull TextView menuWithdrawal,
+      @NonNull LinearLayout profileContent) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
-    this.container = container;
-    this.homeLayout = homeLayout;
+    this.btnPayment = btnPayment;
+    this.logoImage = logoImage;
+    this.menuAccountStatus = menuAccountStatus;
+    this.menuAlarm = menuAlarm;
+    this.menuCustomer = menuCustomer;
+    this.menuHelp = menuHelp;
+    this.menuLogout = menuLogout;
+    this.menuMyInfo = menuMyInfo;
+    this.menuPasswordSecurity = menuPasswordSecurity;
+    this.menuPointHistory = menuPointHistory;
+    this.menuReport = menuReport;
+    this.menuWithdrawal = menuWithdrawal;
+    this.profileContent = profileContent;
   }
 
   @Override
@@ -71,16 +123,87 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.container;
-      FrameLayout container = ViewBindings.findChildViewById(rootView, id);
-      if (container == null) {
+      id = R.id.btnPayment;
+      ImageButton btnPayment = ViewBindings.findChildViewById(rootView, id);
+      if (btnPayment == null) {
         break missingId;
       }
 
-      CoordinatorLayout homeLayout = (CoordinatorLayout) rootView;
+      id = R.id.logoImage;
+      ImageView logoImage = ViewBindings.findChildViewById(rootView, id);
+      if (logoImage == null) {
+        break missingId;
+      }
 
-      return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomNavigation, container,
-          homeLayout);
+      id = R.id.menuAccountStatus;
+      TextView menuAccountStatus = ViewBindings.findChildViewById(rootView, id);
+      if (menuAccountStatus == null) {
+        break missingId;
+      }
+
+      id = R.id.menuAlarm;
+      TextView menuAlarm = ViewBindings.findChildViewById(rootView, id);
+      if (menuAlarm == null) {
+        break missingId;
+      }
+
+      id = R.id.menuCustomer;
+      TextView menuCustomer = ViewBindings.findChildViewById(rootView, id);
+      if (menuCustomer == null) {
+        break missingId;
+      }
+
+      id = R.id.menuHelp;
+      TextView menuHelp = ViewBindings.findChildViewById(rootView, id);
+      if (menuHelp == null) {
+        break missingId;
+      }
+
+      id = R.id.menuLogout;
+      TextView menuLogout = ViewBindings.findChildViewById(rootView, id);
+      if (menuLogout == null) {
+        break missingId;
+      }
+
+      id = R.id.menuMyInfo;
+      TextView menuMyInfo = ViewBindings.findChildViewById(rootView, id);
+      if (menuMyInfo == null) {
+        break missingId;
+      }
+
+      id = R.id.menuPasswordSecurity;
+      TextView menuPasswordSecurity = ViewBindings.findChildViewById(rootView, id);
+      if (menuPasswordSecurity == null) {
+        break missingId;
+      }
+
+      id = R.id.menuPointHistory;
+      TextView menuPointHistory = ViewBindings.findChildViewById(rootView, id);
+      if (menuPointHistory == null) {
+        break missingId;
+      }
+
+      id = R.id.menuReport;
+      TextView menuReport = ViewBindings.findChildViewById(rootView, id);
+      if (menuReport == null) {
+        break missingId;
+      }
+
+      id = R.id.menuWithdrawal;
+      TextView menuWithdrawal = ViewBindings.findChildViewById(rootView, id);
+      if (menuWithdrawal == null) {
+        break missingId;
+      }
+
+      id = R.id.profileContent;
+      LinearLayout profileContent = ViewBindings.findChildViewById(rootView, id);
+      if (profileContent == null) {
+        break missingId;
+      }
+
+      return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomNavigation, btnPayment,
+          logoImage, menuAccountStatus, menuAlarm, menuCustomer, menuHelp, menuLogout, menuMyInfo,
+          menuPasswordSecurity, menuPointHistory, menuReport, menuWithdrawal, profileContent);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

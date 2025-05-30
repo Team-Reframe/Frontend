@@ -44,6 +44,10 @@
         <activity android:name=".ProfileActivity" android:exported="true" />
         <activity android:name=".ReceiptActivity" android:exported="true" />
         <activity android:name=".ScannerActivity" android:exported="true" />
+        <activity android:name=".MyInfoActivity" />
+        <activity android:name=".PointHistoryActivity" />
+        <activity android:name=".PasswordSecurityActivity" />
+        <activity android:name=".WithdrawalActivity" />
     </application>
 </manifest>
 

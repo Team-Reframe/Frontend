@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="blue_primary_dark">#004098</color>
+    <color name="blue_primary_light">#005AD5</color>
     <color name="bottom_nav_icon_color">#FF000000</color>
     <color name="bottom_nav_icon_color_selected">#FF004098</color>
+    <color name="divider_color">#BBBBBB</color>
+    <color name="grey_hint">#888888</color>
+    <color name="profile_background_color">#F6F6F6</color>
+    <color name="profile_section_text_color">#8A000000</color>
+    <color name="red_error">#D32F2F</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Reframe</string>
     <string name="bottom_sheet_title">AI 추천 리스트</string>
+    <string name="button_back">뒤로가기</string>
+    <string name="button_next">다음</string>
+    <string name="error_id_empty">아이디 (이메일)를 입력해주세요.</string>
+    <string name="error_name_empty">이름을 입력해주세요.</string>
+    <string name="error_password_confirm_empty">비밀번호를 다시 입력해주세요.</string>
+    <string name="error_password_empty">비밀번호를 입력해주세요.</string>
+    <string name="error_password_invalid">영어,특수문자 포함 7자리 이상이어야 합니다.</string>
+    <string name="id_hint">아이디 (이메일)를 입력해주세요</string>
+    <string name="id_label">아이디 (이메일)</string>
+    <string name="login_button">로그인</string>
+    <string name="logout_dialog_message">로그아웃 하시겠습니까?</string>
+    <string name="logout_dialog_no">NO</string>
+    <string name="logout_dialog_title">로그아웃</string>
+    <string name="logout_dialog_yes">YES</string>
+    <string name="name_hint">이름을 입력해주세요</string>
+    <string name="name_label">이름</string>
+    <string name="password_confirm_hint">비밀번호를 확인해주세요</string>
+    <string name="password_confirm_label">비밀번호 확인</string>
+    <string name="password_helper_text">영어,특수문자를 포함하여 7자리 이상 입력해주세요.</string>
+    <string name="password_hint">비밀번호를 입력해주세요</string>
+    <string name="password_label">비밀번호</string>
+    <string name="password_mismatch_error">비밀번호가 일치하지 않습니다. 다시 입력해주세요.</string>
+    <string name="profile_menu_account_status">계정 상태</string>
+    <string name="profile_menu_customer_service">고객센터</string>
+    <string name="profile_menu_help">도움말</string>
+    <string name="profile_menu_logout">로그아웃</string>
+    <string name="profile_menu_my_info">내 정보</string>
+    <string name="profile_menu_password_security">비밀번호 및 보안</string>
+    <string name="profile_menu_point_history">포인트 내역</string>
+    <string name="profile_menu_report_problem">문제 신고</string>
+    <string name="profile_menu_withdrawal">회원탈퇴</string>
+    <string name="profile_title_account">계정</string>
+    <string name="profile_title_info_support">정보 및 지원</string>
+    <string name="profile_title_mypage">마이페이지</string>
+    <string name="signup_button">회원가입</string>
+    <string name="signup_complete_message">회원가입이 완료되었습니다!</string>
+    <string name="signup_title">정보를 입력해주세요</string>
+    <string name="title_activity_my_info">내 정보</string>
+    <string name="title_activity_password_security">비밀번호 및 보안</string>
+    <string name="title_activity_point_history">포인트 내역</string>
+    <string name="title_activity_withdrawal">회원탈퇴</string>
+    <string name="welcome_title">환영합니다!</string>
     <style name="Base.Theme.Reframe" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        
         
     </style>
     <style name="BottomNavTheme" parent="Widget.MaterialComponents.BottomNavigationView">

@@ -8,4 +8,7 @@
     <color name="blue_primary_light">#005AD5</color>
     <color name="grey_hint">#888888</color> <!-- 회색 -->
     <color name="red_error">#D32F2F</color> <!-- 빨간색 -->
+    <color name="divider_color">#BBBBBB</color>
+    <color name="profile_background_color">#F6F6F6</color>
+    <color name="profile_section_text_color">#8A000000</color> <!-- 약간 투명한 검정 -->
 </resources>

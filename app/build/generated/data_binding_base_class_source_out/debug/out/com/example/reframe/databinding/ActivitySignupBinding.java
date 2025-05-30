@@ -5,37 +5,88 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivitySignupBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnSignupComplete;
+  public final Button btnBack;
 
   @NonNull
-  public final TextView signupTitle;
+  public final Button btnNext;
 
-  private ActivitySignupBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button btnSignupComplete, @NonNull TextView signupTitle) {
+  @NonNull
+  public final TextInputEditText etId;
+
+  @NonNull
+  public final TextInputEditText etName;
+
+  @NonNull
+  public final TextInputEditText etPassword;
+
+  @NonNull
+  public final TextInputEditText etPasswordConfirm;
+
+  @NonNull
+  public final TextInputLayout tilId;
+
+  @NonNull
+  public final TextInputLayout tilName;
+
+  @NonNull
+  public final TextInputLayout tilPassword;
+
+  @NonNull
+  public final TextInputLayout tilPasswordConfirm;
+
+  @NonNull
+  public final TextView tvPasswordConfirmError;
+
+  @NonNull
+  public final TextView tvPasswordHelper;
+
+  @NonNull
+  public final TextView tvSignupTitle;
+
+  private ActivitySignupBinding(@NonNull LinearLayout rootView, @NonNull Button btnBack,
+      @NonNull Button btnNext, @NonNull TextInputEditText etId, @NonNull TextInputEditText etName,
+      @NonNull TextInputEditText etPassword, @NonNull TextInputEditText etPasswordConfirm,
+      @NonNull TextInputLayout tilId, @NonNull TextInputLayout tilName,
+      @NonNull TextInputLayout tilPassword, @NonNull TextInputLayout tilPasswordConfirm,
+      @NonNull TextView tvPasswordConfirmError, @NonNull TextView tvPasswordHelper,
+      @NonNull TextView tvSignupTitle) {
     this.rootView = rootView;
-    this.btnSignupComplete = btnSignupComplete;
-    this.signupTitle = signupTitle;
+    this.btnBack = btnBack;
+    this.btnNext = btnNext;
+    this.etId = etId;
+    this.etName = etName;
+    this.etPassword = etPassword;
+    this.etPasswordConfirm = etPasswordConfirm;
+    this.tilId = tilId;
+    this.tilName = tilName;
+    this.tilPassword = tilPassword;
+    this.tilPasswordConfirm = tilPasswordConfirm;
+    this.tvPasswordConfirmError = tvPasswordConfirmError;
+    this.tvPasswordHelper = tvPasswordHelper;
+    this.tvSignupTitle = tvSignupTitle;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -60,19 +111,87 @@ public final class ActivitySignupBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnSignupComplete;
-      Button btnSignupComplete = ViewBindings.findChildViewById(rootView, id);
-      if (btnSignupComplete == null) {
+      id = R.id.btnBack;
+      Button btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
         break missingId;
       }
 
-      id = R.id.signupTitle;
-      TextView signupTitle = ViewBindings.findChildViewById(rootView, id);
-      if (signupTitle == null) {
+      id = R.id.btnNext;
+      Button btnNext = ViewBindings.findChildViewById(rootView, id);
+      if (btnNext == null) {
         break missingId;
       }
 
-      return new ActivitySignupBinding((ConstraintLayout) rootView, btnSignupComplete, signupTitle);
+      id = R.id.etId;
+      TextInputEditText etId = ViewBindings.findChildViewById(rootView, id);
+      if (etId == null) {
+        break missingId;
+      }
+
+      id = R.id.etName;
+      TextInputEditText etName = ViewBindings.findChildViewById(rootView, id);
+      if (etName == null) {
+        break missingId;
+      }
+
+      id = R.id.etPassword;
+      TextInputEditText etPassword = ViewBindings.findChildViewById(rootView, id);
+      if (etPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.etPasswordConfirm;
+      TextInputEditText etPasswordConfirm = ViewBindings.findChildViewById(rootView, id);
+      if (etPasswordConfirm == null) {
+        break missingId;
+      }
+
+      id = R.id.tilId;
+      TextInputLayout tilId = ViewBindings.findChildViewById(rootView, id);
+      if (tilId == null) {
+        break missingId;
+      }
+
+      id = R.id.tilName;
+      TextInputLayout tilName = ViewBindings.findChildViewById(rootView, id);
+      if (tilName == null) {
+        break missingId;
+      }
+
+      id = R.id.tilPassword;
+      TextInputLayout tilPassword = ViewBindings.findChildViewById(rootView, id);
+      if (tilPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.tilPasswordConfirm;
+      TextInputLayout tilPasswordConfirm = ViewBindings.findChildViewById(rootView, id);
+      if (tilPasswordConfirm == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPasswordConfirmError;
+      TextView tvPasswordConfirmError = ViewBindings.findChildViewById(rootView, id);
+      if (tvPasswordConfirmError == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPasswordHelper;
+      TextView tvPasswordHelper = ViewBindings.findChildViewById(rootView, id);
+      if (tvPasswordHelper == null) {
+        break missingId;
+      }
+
+      id = R.id.tvSignupTitle;
+      TextView tvSignupTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvSignupTitle == null) {
+        break missingId;
+      }
+
+      return new ActivitySignupBinding((LinearLayout) rootView, btnBack, btnNext, etId, etName,
+          etPassword, etPasswordConfirm, tilId, tilName, tilPassword, tilPasswordConfirm,
+          tvPasswordConfirmError, tvPasswordHelper, tvSignupTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
