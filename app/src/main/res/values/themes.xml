@@ -2,7 +2,7 @@
     <!-- 기존 테마 -->
     <style name="Base.Theme.Reframe" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- 예: 기본 텍스트 색상, 기본 배경색 등을 여기에 정의할 수 있습니다. -->
+        <!-- 예: 기본 텍스트 색상, 기본 배경색 등을 정의 -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -14,25 +14,41 @@
         <item name="android:background">@android:color/white</item>
         <item name="itemIconTint">@color/bottom_nav_icon_selector</item>
         <item name="itemTextColor">@color/bottom_nav_icon_selector</item>
-
-        <style name="ProfileMenuItem">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">wrap_content</item>
-            <item name="android:paddingTop">16dp</item>
-            <item name="android:paddingBottom">16dp</item>
-            <item name="android:textSize">16sp</item>
-            <item name="android:textColor">@android:color/black</item>
-            <item name="android:drawableEnd">@drawable/ic_arrow_forward_ios</item>
-            <item name="android:drawablePadding">8dp</item>
-            <item name="android:clickable">true</item>
-            <item name="android:focusable">true</item>
-            <item name="android:background">?attr/selectableItemBackground</item>
-        </style>
-
-        <style name="ProfileMenuDivider">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">1dp</item>
-            <item name="android:background">#EEEEEE</item> <!-- 더 밝은 구분선 -->
-        </style>
     </style>
+
+    <!-- 프로필 메뉴 아이템 스타일 -->
+    <style name="ProfileMenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_forward_ios</item> <!-- 이 drawable 리소스가 프로젝트에 있는지 확인하세요 -->
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- 프로필 메뉴 구분선 스타일 -->
+    <style name="ProfileMenuDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#EEEEEE</item> <!-- 더 밝은 구분선 -->
+    </style>
+
+    <style name="MyInfoToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item> <!-- 1. 툴바 제목 크기 -->
+        <item name="android:textStyle">bold</item> <!-- 1. 툴바 제목 굵게 -->
+        <item name="android:textColor">@color/toolbar_title_color</item> <!-- 1. 툴바 제목 색상 -->
+    </style>
+
+    <style name="FabShapeAppearanceOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- 50%를 주면 원형 -->
+    </style>
+
 </resources>

@@ -1,62 +1,58 @@
 [
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_point_history.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_point_history.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_receipt.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_receipt.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_splash.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_splash.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_password_security.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_password_security.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_login.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_my_info.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_my_info.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_map.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_map.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_splash.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_my_info.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_my_info.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_home.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_scanner.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_scanner.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_signup_success.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_signup_success.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_signup_success.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_signup_success.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_point_history.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_point_history.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_profile.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_password_security.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_password_security.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_signup.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_signup.xml"
     },
     {
         "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_profile.xml",
         "source": "com.example.reframe.app-main-38:/layout/activity_profile.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_withdrawal.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_withdrawal.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_scanner.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_scanner.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_home.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_home.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_map.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_map.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_signup.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_signup.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_login.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-35:\\layout\\activity_receipt.xml",
-        "source": "C:\\Users\\my\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-38:\\layout\\activity_receipt.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_withdrawal.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_withdrawal.xml"
     }
 ]

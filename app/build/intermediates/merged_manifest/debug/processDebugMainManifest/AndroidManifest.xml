@@ -78,6 +78,10 @@
         <activity
             android:name="com.example.reframe.ScannerActivity"
             android:exported="true" />
+        <activity android:name="com.example.reframe.MyInfoActivity" />
+        <activity android:name="com.example.reframe.PointHistoryActivity" />
+        <activity android:name="com.example.reframe.PasswordSecurityActivity" />
+        <activity android:name="com.example.reframe.WithdrawalActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

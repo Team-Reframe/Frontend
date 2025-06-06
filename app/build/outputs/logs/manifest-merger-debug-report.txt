@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-48:12
-INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-48:12
-INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-48:12
-INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-48:12
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-52:12
+INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:1:1-52:12
 MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\my\.gradle\caches\8.10.2\transforms\84c0b0383950f37228a76384addaadba\transformed\viewbinding-8.8.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\my\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\my\.gradle\caches\8.10.2\transforms\b5c5220313ab1da87eb39cad8c2e1f16\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
@@ -76,8 +76,8 @@ ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:8:5-47:19
-INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:8:5-47:19
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:8:5-51:19
+INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:8:5-51:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\my\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\my\.gradle\caches\8.10.2\transforms\cf656d045e430a124527102b061a2de5\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\my\.gradle\caches\8.10.2\transforms\b5c5220313ab1da87eb39cad8c2e1f16\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -200,6 +200,22 @@ ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:
 		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:46:51-74
 	android:name
 		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:46:19-50
+activity#com.example.reframe.MyInfoActivity
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:47:9-52
+	android:name
+		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:47:19-49
+activity#com.example.reframe.PointHistoryActivity
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:48:9-58
+	android:name
+		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:48:19-55
+activity#com.example.reframe.PasswordSecurityActivity
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:49:9-62
+	android:name
+		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:49:19-59
+activity#com.example.reframe.WithdrawalActivity
+ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:50:9-56
+	android:name
+		ADDED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml:50:19-53
 uses-sdk
 INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\my\StudioProjects\Frontend\app\src\main\AndroidManifest.xml
