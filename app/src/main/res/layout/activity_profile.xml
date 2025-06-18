@@ -104,7 +104,7 @@
                     android:background="#AAAAAA" />
 
                 <TextView
-                    android:id="@+id/tv_password_security"
+                    android:id="@+id/tv_password_change"
                     style="@style/ProfileMenuItem"
                     android:text="비밀번호 변경" />
 
