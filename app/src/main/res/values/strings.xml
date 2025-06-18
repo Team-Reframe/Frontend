@@ -57,4 +57,9 @@
     <string name="title_activity_point_history">포인트 내역</string>
     <string name="title_activity_password_security">비밀번호 변경</string>
     <string name="title_activity_withdrawal">회원탈퇴</string>
+
+    <string name="user_point_title">
+        <![CDATA[<font color="#FFF763C">박수연</font>님의 포인트]]>
+    </string>
+
 </resources>

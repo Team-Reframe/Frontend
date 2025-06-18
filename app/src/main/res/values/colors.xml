@@ -26,4 +26,10 @@
     <color name="label_blue">#0D6EFA</color>
     <color name="button_blue">#004098</color>
     <color name="helper_text_gray">#8A8A8E</color>
+    <color name="point_orange">#FF763C</color>
+    <color name="point_blue">#004098</color>
+    <color name="light_blue_background">#F0F4FF</color>
+    <color name="divider_gray">#E0E0E0</color>
+    <color name="text_gray">#8A8A8E</color>
+    <color name="text_dark">#3A3A3C</color>
 </resources>
