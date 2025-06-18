@@ -37,6 +37,8 @@
         android:layout_gravity="bottom"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
