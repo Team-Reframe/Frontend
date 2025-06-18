@@ -51,4 +51,10 @@
         <item name="cornerSize">50%</item> <!-- 50%를 주면 원형 -->
     </style>
 
+    <style name="EditTextBlue" parent="Widget.AppCompat.EditText">
+        <item name="android:colorControlNormal">@color/gray_500</item>
+        <item name="android:colorControlActivated">@color/bottom_nav_icon_color_selected</item>
+        <item name="android:colorControlHighlight">@color/bottom_nav_icon_color_selected</item>
+    </style>
+
 </resources>

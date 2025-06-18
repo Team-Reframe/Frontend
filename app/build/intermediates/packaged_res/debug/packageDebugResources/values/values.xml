@@ -7,10 +7,22 @@
     <color name="bottom_nav_icon_color_selected">#FF004098</color>
     <color name="divider_color">#BBBBBB</color>
     <color name="grey_hint">#888888</color>
+    <color name="my_info_background">#F8F8F8</color>
+    <color name="my_info_divider_color">#E0E0E0</color>
+    <color name="my_info_edit_fab_bg">#FF7D45</color>
+    <color name="my_info_label_text_color">#757575</color>
+    <color name="my_info_value_text_color">#212121</color>
     <color name="profile_background_color">#F6F6F6</color>
     <color name="profile_section_text_color">#8A000000</color>
     <color name="red_error">#D32F2F</color>
+    <color name="toolbar_title_color">#000000</color>
     <color name="white">#FFFFFFFF</color>
+    <dimen name="my_info_edit_fab_size">32dp</dimen>
+    <dimen name="my_info_horizontal_padding">24dp</dimen>
+    <dimen name="my_info_item_height">48dp</dimen>
+    <dimen name="my_info_list_item_text_size">14sp</dimen>
+    <dimen name="my_info_profile_image_size">100dp</dimen>
+    <dimen name="toolbar_title_text_size">18sp</dimen>
     <string name="app_name">Reframe</string>
     <string name="bottom_sheet_title">AI 추천 리스트</string>
     <string name="button_back">뒤로가기</string>
@@ -51,7 +63,7 @@
     <string name="signup_complete_message">회원가입이 완료되었습니다!</string>
     <string name="signup_title">정보를 입력해주세요</string>
     <string name="title_activity_my_info">내 정보</string>
-    <string name="title_activity_password_security">비밀번호 및 보안</string>
+    <string name="title_activity_password_security">비밀번호 변경</string>
     <string name="title_activity_point_history">포인트 내역</string>
     <string name="title_activity_withdrawal">회원탈퇴</string>
     <string name="welcome_title">환영합니다!</string>
@@ -66,26 +78,35 @@
         <item name="android:background">@android:color/white</item>
         <item name="itemIconTint">@color/bottom_nav_icon_selector</item>
         <item name="itemTextColor">@color/bottom_nav_icon_selector</item>
-
-        <style name="ProfileMenuItem">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">wrap_content</item>
-            <item name="android:paddingTop">16dp</item>
-            <item name="android:paddingBottom">16dp</item>
-            <item name="android:textSize">16sp</item>
-            <item name="android:textColor">@android:color/black</item>
-            <item name="android:drawableEnd">@drawable/ic_arrow_forward_ios</item>
-            <item name="android:drawablePadding">8dp</item>
-            <item name="android:clickable">true</item>
-            <item name="android:focusable">true</item>
-            <item name="android:background">?attr/selectableItemBackground</item>
-        </style>
-
-        <style name="ProfileMenuDivider">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">1dp</item>
-            <item name="android:background">#EEEEEE</item> <!-- 더 밝은 구분선 -->
-        </style>
+    </style>
+    <style name="FabShapeAppearanceOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> 
+    </style>
+    <style name="MyInfoToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item> 
+        <item name="android:textStyle">bold</item> 
+        <item name="android:textColor">@color/toolbar_title_color</item> 
+    </style>
+    <style name="ProfileMenuDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#EEEEEE</item> 
+    </style>
+    <style name="ProfileMenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_forward_ios</item> 
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
     </style>
     <style name="Theme.Reframe" parent="Base.Theme.Reframe"/>
 </resources>

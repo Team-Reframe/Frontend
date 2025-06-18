@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 포커스 되었을 때 (활성화 상태) -->
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:gravity="bottom">
+                <shape android:shape="rectangle">
+                    <size android:height="3dp" />
+                    <solid android:color="@color/edittext_underline_active_blue" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 기본 상태 -->
+    <item>
+        <layer-list>
+            <item android:gravity="bottom">
+                <shape android:shape="rectangle">
+                    <size android:height="3dp" />
+                    <solid android:color="@color/gray_500" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

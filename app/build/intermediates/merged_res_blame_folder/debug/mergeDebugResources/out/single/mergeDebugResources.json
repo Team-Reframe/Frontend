@@ -104,6 +104,10 @@
         "source": "com.example.reframe.app-main-38:/anim/slide_down.xml"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_person_placeholder.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_person_placeholder.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/drawable_signupup.png.flat",
         "source": "com.example.reframe.app-main-38:/drawable/signupup.png"
     },
@@ -124,6 +128,10 @@
         "source": "com.example.reframe.app-main-38:/layout/activity_signup.xml"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/layout_list_item_my_info.xml.flat",
+        "source": "com.example.reframe.app-main-38:/layout/list_item_my_info.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/menu_bottom_nav_menu.xml.flat",
         "source": "com.example.reframe.app-main-38:/menu/bottom_nav_menu.xml"
     },
@@ -132,12 +140,20 @@
         "source": "com.example.reframe.app-main-38:/color/bottom_nav_icon_selector.xml"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_edit_pencil.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_edit_pencil.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/drawable_re_ceipt_logo.png.flat",
         "source": "com.example.reframe.app-main-38:/drawable/re_ceipt_logo.png"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/mipmap-anydpi_ic_launcher.xml.flat",
         "source": "com.example.reframe.app-main-38:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_arrow_back.xml"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",

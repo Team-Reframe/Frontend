@@ -17,4 +17,10 @@
     <color name="my_info_value_text_color">#212121</color> <!-- 값 텍스트 색상 (진한 회색) -->
     <color name="my_info_divider_color">#E0E0E0</color> <!-- 구분선 색상 -->
     <color name="toolbar_title_color">#000000</color> <!-- 툴바 제목 색상 -->
+    <color name="gray_500">#8E8E93</color>
+    <color name="gray_600">#636366</color>
+    <color name="gray_800">#3A3A3C</color>
+    <color name="password_label_blue">#003E97</color>
+    <color name="edittext_underline_active_blue">#0043D0</color>
+    <color name="withdraw_button_blue">#004098</color>
 </resources>
