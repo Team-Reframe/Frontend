@@ -11,7 +11,7 @@
     <color name="divider_color">#BBBBBB</color>
     <color name="profile_background_color">#F6F6F6</color>
     <color name="profile_section_text_color">#8A000000</color> <!-- 약간 투명한 검정 -->
-    <color name="my_info_background">#F8F8F8</color>
+    <color name="my_info_background">#F5F5F5</color>
     <color name="my_info_edit_fab_bg">#FF7D45</color> <!-- 주황색 -->
     <color name="my_info_label_text_color">#757575</color> <!-- 레이블 텍스트 색상 (약간 연한 회색) -->
     <color name="my_info_value_text_color">#212121</color> <!-- 값 텍스트 색상 (진한 회색) -->
@@ -23,4 +23,7 @@
     <color name="password_label_blue">#003E97</color>
     <color name="edittext_underline_active_blue">#0043D0</color>
     <color name="withdraw_button_blue">#004098</color>
+    <color name="label_blue">#0D6EFA</color>
+    <color name="button_blue">#004098</color>
+    <color name="helper_text_gray">#8A8A8E</color>
 </resources>

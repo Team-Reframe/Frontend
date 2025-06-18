@@ -46,7 +46,7 @@
         <activity android:name=".ScannerActivity" android:exported="true" />
         <activity android:name=".MyInfoActivity" />
         <activity android:name=".PointHistoryActivity" />
-        <activity android:name=".PasswordSecurityActivity" />
+        <activity android:name=".PasswordChangeActivity" />
         <activity android:name=".WithdrawalActivity" />
     </application>
 </manifest>

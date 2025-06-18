@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 포커스 되었을 때 (활성화 상태) -->
-    <item android:state_focused="true">
-        <layer-list>
-            <item android:gravity="bottom">
-                <shape android:shape="rectangle">
-                    <size android:height="3dp" />
-                    <solid android:color="@color/edittext_underline_active_blue" />
-                </shape>
-            </item>
-        </layer-list>
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <!-- 밑줄 두께 -->
+            <size android:height="3dp" />
+            <!-- 밑줄 색상 -->
+            <solid android:color="@color/edittext_underline_active_blue" />
+        </shape>
     </item>
 
-    <!-- 기본 상태 -->
-    <item>
-        <layer-list>
-            <item android:gravity="bottom">
-                <shape android:shape="rectangle">
-                    <size android:height="3dp" />
-                    <solid android:color="@color/gray_500" />
-                </shape>
-            </item>
-        </layer-list>
-    </item>
-
-</selector>
+</layer-list>

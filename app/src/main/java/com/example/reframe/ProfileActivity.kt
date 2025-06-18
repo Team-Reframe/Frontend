@@ -37,7 +37,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         tvPasswordSecurity.setOnClickListener {
-            startActivity(Intent(this, PasswordSecurityActivity::class.java))
+            startActivity(Intent(this, PasswordChangeActivity::class.java))
         }
 
         tvWithdrawal.setOnClickListener {
