@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_info_background"
+    tools:context=".MyInfoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_info_background"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_my_info"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextAppearance="@style/MyInfoToolbarTitleStyle"
+            app:title="내 프로필 보기" /> <!-- 툴바 제목 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="박수연님의 정보"
+                android:paddingTop="20dp"
+                style="@style/MyInfoToolbarTitleStyle"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- 프로필 이미지 섹션 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="24dp"
+                android:paddingBottom="32dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_profile_container"
+                    android:layout_width="@dimen/my_info_profile_image_size"
+                    android:layout_height="@dimen/my_info_profile_image_size"
+                    app:cardCornerRadius="60dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_person_placeholder"
+                    android:scaleType="centerInside"
+                    android:background="#E0E0E0"
+                    tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_edit_profile_image"
+                    android:layout_width="@dimen/my_info_edit_fab_size"
+                    android:layout_height="@dimen/my_info_edit_fab_size"
+                    android:src="@drawable/ic_edit_pencil"
+                    app:fabCustomSize="@dimen/my_info_edit_fab_size"
+                    app:tint="@null"
+                    app:backgroundTint="@color/my_info_edit_fab_bg"
+                    app:elevation="2dp"
+                    app:shapeAppearanceOverlay="@style/FabShapeAppearanceOverlay"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="5dp"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_profile_container"
+                    app:layout_constraintEnd_toEndOf="@id/cv_profile_container"
+                    android:layout_marginEnd="-8dp"
+                    android:layout_marginBottom="-8dp"
+                    android:contentDescription="프로필 사진 편집" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 정보 목록 -->
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/my_info_divider_color"
+                android:layout_marginStart="@dimen/my_info_horizontal_padding"
+                android:layout_marginEnd="@dimen/my_info_horizontal_padding"/>
+
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_english_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/my_info_divider_color"
+                android:layout_marginStart="@dimen/my_info_horizontal_padding"
+                android:layout_marginEnd="@dimen/my_info_horizontal_padding"/>
+
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/my_info_divider_color"
+                android:layout_marginStart="@dimen/my_info_horizontal_padding"
+                android:layout_marginEnd="@dimen/my_info_horizontal_padding"/>
+
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/my_info_divider_color"
+                android:layout_marginStart="@dimen/my_info_horizontal_padding"
+                android:layout_marginEnd="@dimen/my_info_horizontal_padding"/>
+
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/my_info_divider_color"
+                android:layout_marginStart="@dimen/my_info_horizontal_padding"
+                android:layout_marginEnd="@dimen/my_info_horizontal_padding"/>
+
+            <include layout="@layout/list_item_my_info"
+                android:id="@+id/item_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info_item_height"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/BottomNavTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

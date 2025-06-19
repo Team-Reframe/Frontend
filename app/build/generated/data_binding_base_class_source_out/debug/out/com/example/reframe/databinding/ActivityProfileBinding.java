@@ -53,7 +53,7 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final TextView tvMyInfo;
 
   @NonNull
-  public final TextView tvPasswordSecurity;
+  public final TextView tvPasswordChange;
 
   @NonNull
   public final TextView tvPointHistory;
@@ -69,7 +69,7 @@ public final class ActivityProfileBinding implements ViewBinding {
       @NonNull ImageView ivPayment, @NonNull LinearLayout linearLayout,
       @NonNull CoordinatorLayout profileLayout, @NonNull TextView tvAccountStatus,
       @NonNull TextView tvCustomerCenter, @NonNull TextView tvHelp, @NonNull TextView tvLogout,
-      @NonNull TextView tvMyInfo, @NonNull TextView tvPasswordSecurity,
+      @NonNull TextView tvMyInfo, @NonNull TextView tvPasswordChange,
       @NonNull TextView tvPointHistory, @NonNull TextView tvReportProblem,
       @NonNull TextView tvWithdrawal) {
     this.rootView = rootView;
@@ -83,7 +83,7 @@ public final class ActivityProfileBinding implements ViewBinding {
     this.tvHelp = tvHelp;
     this.tvLogout = tvLogout;
     this.tvMyInfo = tvMyInfo;
-    this.tvPasswordSecurity = tvPasswordSecurity;
+    this.tvPasswordChange = tvPasswordChange;
     this.tvPointHistory = tvPointHistory;
     this.tvReportProblem = tvReportProblem;
     this.tvWithdrawal = tvWithdrawal;
@@ -172,9 +172,9 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_password_security;
-      TextView tvPasswordSecurity = ViewBindings.findChildViewById(rootView, id);
-      if (tvPasswordSecurity == null) {
+      id = R.id.tv_password_change;
+      TextView tvPasswordChange = ViewBindings.findChildViewById(rootView, id);
+      if (tvPasswordChange == null) {
         break missingId;
       }
 
@@ -198,7 +198,7 @@ public final class ActivityProfileBinding implements ViewBinding {
 
       return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomNavigation, ivLogo,
           ivPayment, linearLayout, profileLayout, tvAccountStatus, tvCustomerCenter, tvHelp,
-          tvLogout, tvMyInfo, tvPasswordSecurity, tvPointHistory, tvReportProblem, tvWithdrawal);
+          tvLogout, tvMyInfo, tvPasswordChange, tvPointHistory, tvReportProblem, tvWithdrawal);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

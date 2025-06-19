@@ -12,6 +12,10 @@
         "source": "com.example.reframe.app-main-38:/drawable/ic_home.png"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_visibility_on.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_visibility_on.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/layout_activity_login.xml.flat",
         "source": "com.example.reframe.app-main-38:/layout/activity_login.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "com.example.reframe.app-debug-36:/xml_data_extraction_rules.xml.flat",
         "source": "com.example.reframe.app-main-38:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/drawable_button_background_blue.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/button_background_blue.xml"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/drawable_button_outline_blue.xml.flat",
@@ -124,6 +132,10 @@
         "source": "com.example.reframe.app-main-38:/drawable/receipt_image.png"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/layout_list_item_point_history.xml.flat",
+        "source": "com.example.reframe.app-main-38:/layout/list_item_point_history.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/layout_activity_signup.xml.flat",
         "source": "com.example.reframe.app-main-38:/layout/activity_signup.xml"
     },
@@ -144,8 +156,20 @@
         "source": "com.example.reframe.app-main-38:/drawable/ic_edit_pencil.xml"
     },
     {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_password_toggle.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_password_toggle.xml"
+    },
+    {
         "merged": "com.example.reframe.app-debug-36:/drawable_re_ceipt_logo.png.flat",
         "source": "com.example.reframe.app-main-38:/drawable/re_ceipt_logo.png"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/drawable_edittext_custom_underline.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/edittext_custom_underline.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/layout_activity_password_change.xml.flat",
+        "source": "com.example.reframe.app-main-38:/layout/activity_password_change.xml"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/mipmap-anydpi_ic_launcher.xml.flat",
@@ -160,8 +184,12 @@
         "source": "com.example.reframe.app-main-38:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.reframe.app-debug-36:/layout_activity_password_security.xml.flat",
-        "source": "com.example.reframe.app-main-38:/layout/activity_password_security.xml"
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_coin.png.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_coin.png"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_visibility_off.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_visibility_off.xml"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/drawable_bg_input_rounded.xml.flat",
@@ -206,6 +234,10 @@
     {
         "merged": "com.example.reframe.app-debug-36:/anim_fade_in.xml.flat",
         "source": "com.example.reframe.app-main-38:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-debug-36:/drawable_ic_tune.xml.flat",
+        "source": "com.example.reframe.app-main-38:/drawable/ic_tune.xml"
     },
     {
         "merged": "com.example.reframe.app-debug-36:/drawable_id_input.png.flat",

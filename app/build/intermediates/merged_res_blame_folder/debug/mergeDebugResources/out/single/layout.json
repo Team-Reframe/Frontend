@@ -1,11 +1,11 @@
 [
     {
-        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_receipt.xml",
-        "source": "com.example.reframe.app-main-38:/layout/activity_receipt.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/list_item_point_history.xml",
+        "source": "com.example.reframe.app-main-38:/layout/list_item_point_history.xml"
     },
     {
-        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_password_security.xml",
-        "source": "com.example.reframe.app-main-38:/layout/activity_password_security.xml"
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_receipt.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_receipt.xml"
     },
     {
         "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_my_info.xml",
@@ -18,6 +18,10 @@
     {
         "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/list_item_my_info.xml",
         "source": "com.example.reframe.app-main-38:/layout/list_item_my_info.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_password_change.xml",
+        "source": "com.example.reframe.app-main-38:/layout/activity_password_change.xml"
     },
     {
         "merged": "com.example.reframe.app-mergeDebugResources-35:/layout/activity_home.xml",

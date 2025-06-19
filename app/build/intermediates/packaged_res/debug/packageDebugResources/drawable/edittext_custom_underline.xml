@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <!-- 밑줄 두께 -->
+            <size android:height="3dp" />
+            <!-- 밑줄 색상 -->
+            <solid android:color="@color/edittext_underline_active_blue" />
+        </shape>
+    </item>
+
+</layer-list>
