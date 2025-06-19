@@ -17,7 +17,7 @@ class PointHistoryAdapter(private val items: List<PointHistoryItem>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
     }
-
+//안녕 귀신아
     override fun getItemCount(): Int = items.size
 
     class ViewHolder(private val binding: ListItemPointHistoryBinding) :

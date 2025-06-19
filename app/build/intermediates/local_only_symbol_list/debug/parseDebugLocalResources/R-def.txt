@@ -6,6 +6,7 @@ anim scale_up
 anim slide_down
 anim slide_down_slow
 color black
+color blue
 color blue_primary_dark
 color blue_primary_light
 color bottom_nav_icon_color
@@ -47,8 +48,12 @@ dimen toolbar_title_text_size
 drawable bg_input_line
 drawable bg_input_rounded
 drawable bg_signup_border
+drawable bread
 drawable button_background_blue
 drawable button_outline_blue
+drawable cafe
+drawable cu
+drawable defaultstore
 drawable divider_line
 drawable edittext_custom_underline
 drawable ic_arrow_back
@@ -80,6 +85,7 @@ drawable red_dot_marker
 drawable signup
 drawable signup_success
 drawable signupup
+drawable siheung
 drawable start_logo
 drawable start_notice
 id appBarLayout
@@ -144,6 +150,7 @@ id recommend_list
 id rv_point_history
 id scrollView
 id splashRoot
+id store_image
 id tilId
 id tilName
 id tilPassword
@@ -158,6 +165,9 @@ id tvFindId
 id tvPasswordConfirmError
 id tvPasswordHelper
 id tvSignupTitle
+id tvStoreAddress
+id tvStoreName
+id tvStorePhone
 id tvWelcome
 id tv_account_status
 id tv_confirm_password_label
@@ -202,7 +212,9 @@ layout activity_scanner
 layout activity_signup
 layout activity_signup_success
 layout activity_splash
+layout activity_store_detail
 layout activity_withdrawal
+layout item_store
 layout list_item_my_info
 layout list_item_point_history
 menu bottom_nav_menu

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="blue">#2196F3</color>
     <color name="blue_primary_dark">#004098</color>
     <color name="blue_primary_light">#005AD5</color>
     <color name="bottom_nav_icon_color">#FF000000</color>

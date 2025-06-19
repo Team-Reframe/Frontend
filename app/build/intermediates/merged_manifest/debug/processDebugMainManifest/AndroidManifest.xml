@@ -83,6 +83,7 @@
         <activity android:name="com.example.reframe.PointHistoryActivity" />
         <activity android:name="com.example.reframe.PasswordChangeActivity" />
         <activity android:name="com.example.reframe.WithdrawalActivity" />
+        <activity android:name="com.example.reframe.StoreDetailActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

@@ -48,6 +48,8 @@
         <activity android:name=".PointHistoryActivity" />
         <activity android:name=".PasswordChangeActivity" />
         <activity android:name=".WithdrawalActivity" />
+        <activity android:name=".StoreDetailActivity" />
+
     </application>
 </manifest>
 

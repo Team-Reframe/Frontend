@@ -1430,6 +1430,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color blue_primary_dark
 color blue_primary_light
 color bottom_nav_icon_color
@@ -3109,6 +3110,7 @@ drawable avd_show_password
 drawable bg_input_line
 drawable bg_input_rounded
 drawable bg_signup_border
+drawable bread
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3119,6 +3121,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background_blue
 drawable button_outline_blue
+drawable cafe
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3138,6 +3141,8 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable cu
+drawable defaultstore
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3267,6 +3272,7 @@ drawable red_dot_marker
 drawable signup
 drawable signup_success
 drawable signupup
+drawable siheung
 drawable start_logo
 drawable start_notice
 drawable test_level_drawable
@@ -3521,6 +3527,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3777,6 +3784,7 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
+id store_image
 id stretch
 id submenuarrow
 id submit_area
@@ -3846,6 +3854,9 @@ id tvFindId
 id tvPasswordConfirmError
 id tvPasswordHelper
 id tvSignupTitle
+id tvStoreAddress
+id tvStoreName
+id tvStorePhone
 id tvWelcome
 id tv_account_status
 id tv_confirm_password_label
@@ -4031,6 +4042,7 @@ layout activity_scanner
 layout activity_signup
 layout activity_signup_success
 layout activity_splash
+layout activity_store_detail
 layout activity_withdrawal
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -4050,6 +4062,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_store
 layout list_item_my_info
 layout list_item_point_history
 layout m3_alert_dialog

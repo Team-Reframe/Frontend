@@ -19,6 +19,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.reframe.api.RetrofitClient
+import com.example.reframe.api.StoreResponse
 import com.google.android.gms.location.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -26,6 +28,14 @@ import com.kakao.vectormap.*
 import com.kakao.vectormap.label.Label
 import com.kakao.vectormap.label.LabelOptions
 import com.kakao.vectormap.label.LabelStyle
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import androidx.recyclerview.widget.LinearLayoutManager
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+
 
 class MapActivity : AppCompatActivity() {
 
@@ -50,6 +60,9 @@ class MapActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var sheetTitle: TextView
 
+    // ✅ [추가] 가맹점 리스트용 Adapter
+    private lateinit var storeAdapter: StoreAdapter
+
     private val readyCallback = object : KakaoMapReadyCallback() {
         override fun onMapReady(map: KakaoMap) {
             Log.d("KakaoMap", "✅ onMapReady 호출됨")
@@ -69,6 +82,9 @@ class MapActivity : AppCompatActivity() {
             }
 
             startLocationUpdates()
+
+            // ✅ [추가] 가맹점 데이터 불러오기 + 마커 + BottomSheet 세팅
+            loadStoresAndShowMarkers()
         }
 
         override fun getPosition(): LatLng = startPosition
@@ -89,8 +105,6 @@ class MapActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         KakaoMapSdk.init(this, "ee292f2b71c5823748b09bb6d9c5ba4c")
         setContentView(R.layout.activity_map)
-
-
 
         // ✅ 네비게이션 바 세팅
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
@@ -143,15 +157,43 @@ class MapActivity : AppCompatActivity() {
         val bottomSheet = findViewById<LinearLayout>(R.id.bottom_sheet)
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
 
-        val screenHeight = resources.displayMetrics.heightPixels  // 전체 화면 높이(px)
-        bottomSheetBehavior.peekHeight = (screenHeight * 0.20).toInt()  // 화면의 12%만큼 peekHeight 설정
-
+        val screenHeight = resources.displayMetrics.heightPixels
+        bottomSheetBehavior.peekHeight = (screenHeight * 0.20).toInt()
         bottomSheetBehavior.isHideable = false
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
 
-
         sheetTitle = findViewById(R.id.bottom_sheet_title)
+
+        // ✅ 여기서 SpannableString으로 일부 색 입힘
+        val titleText = "이번 주 인기 가맹점"
+        val spannable = SpannableString(titleText)
+
+        val start = titleText.indexOf("인기")
+        val end = start + "인기".length
+
+        spannable.setSpan(
+            ForegroundColorSpan(ContextCompat.getColor(this, R.color.blue)),
+            start,
+            end,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+
+        sheetTitle.text = spannable
+
         recyclerView = findViewById(R.id.recommend_list)
+
+        // ✅ [추가] 가맹점 리스트 Adapter 연결
+        storeAdapter = StoreAdapter { store ->
+            val intent = Intent(this, StoreDetailActivity::class.java).apply {
+                putExtra("name", store.name)
+                putExtra("address", store.address)
+                putExtra("phone", store.phone ?: "전화번호 없음")
+            }
+            startActivity(intent)
+        }
+        recyclerView.adapter = storeAdapter
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
         if (hasLocationPermission()) {
             getStartLocation()
@@ -225,4 +267,61 @@ class MapActivity : AppCompatActivity() {
             .setCancelable(false)
             .show()
     }
+
+    // ✅ [추가] 가맹점 불러오기 + 마커 찍기 + BottomSheet 리스트 세팅
+    private fun loadStoresAndShowMarkers() {
+        RetrofitClient.instance.getAllStores().enqueue(object : Callback<List<StoreResponse>> {
+            override fun onResponse(
+                call: Call<List<StoreResponse>>,
+                response: Response<List<StoreResponse>>
+            ) {
+                if (response.isSuccessful) {
+                    val stores = response.body() ?: emptyList()
+
+                    // ✅ 4️⃣ 이름 리스트
+                    val storeNames = listOf("siheung", "bread", "cafe", "cu")
+
+                    val imageResIds = listOf(
+                        R.drawable.siheung,
+                        R.drawable.bread,
+                        R.drawable.cafe,
+                        R.drawable.cu
+                    )
+
+                    stores.forEachIndexed { index, store ->
+                        store.imageResId = if (index < imageResIds.size) {
+                            imageResIds[index]
+                        } else {
+                            R.drawable.defaultstore
+                        }
+                        Log.d("StoreDebug", "index=$index → imageResId=${store.imageResId}")
+                    }
+
+
+                    storeAdapter.submitList(stores)
+
+                    // ✅ 지도 마커 찍기
+                    val layer = kakaoMap?.labelManager?.getLayer()
+                    stores.forEach { store ->
+                        layer?.addLabel(
+                            LabelOptions.from(store.name, LatLng.from(store.latitude, store.longitude))
+                                .setStyles(
+                                    LabelStyle.from(R.drawable.red_dot_marker)
+                                        .setAnchorPoint(0.5f, 1.0f)
+                                )
+                        )
+                    }
+
+                } else {
+                    Toast.makeText(this@MapActivity, "가맹점 불러오기 실패", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<List<StoreResponse>>, t: Throwable) {
+                t.printStackTrace()
+                Toast.makeText(this@MapActivity, "네트워크 오류: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
 }
