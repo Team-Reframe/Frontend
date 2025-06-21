@@ -44,16 +44,16 @@
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-39:\\layout\\activity_map.xml"
     },
     {
+        "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-36:\\layout\\activity_store_detail.xml",
+        "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-39:\\layout\\activity_store_detail.xml"
+    },
+    {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-36:\\layout\\activity_home.xml",
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-39:\\layout\\activity_home.xml"
     },
     {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-36:\\layout\\activity_scanner.xml",
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-39:\\layout\\activity_scanner.xml"
-    },
-    {
-        "merged": "com.example.reframe.app-mergeDebugResources-36:/layout/activity_store_detail.xml",
-        "source": "com.example.reframe.app-main-39:/layout/activity_store_detail.xml"
     },
     {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-36:\\layout\\activity_receipt.xml",
@@ -70,5 +70,9 @@
     {
         "merged": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-mergeDebugResources-36:\\layout\\list_item_point_history.xml",
         "source": "C:\\Users\\dnwls\\.gradle\\daemon\\8.10.2\\com.example.reframe.app-main-39:\\layout\\list_item_point_history.xml"
+    },
+    {
+        "merged": "com.example.reframe.app-mergeDebugResources-36:/layout/activity_home.xml",
+        "source": "com.example.reframe.app-main-39:/layout/activity_home.xml"
     }
 ]

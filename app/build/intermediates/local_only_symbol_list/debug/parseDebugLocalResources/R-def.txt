@@ -45,6 +45,7 @@ dimen my_info_item_height
 dimen my_info_list_item_text_size
 dimen my_info_profile_image_size
 dimen toolbar_title_text_size
+drawable alarm
 drawable bg_input_line
 drawable bg_input_rounded
 drawable bg_signup_border
@@ -56,6 +57,7 @@ drawable cu
 drawable defaultstore
 drawable divider_line
 drawable edittext_custom_underline
+drawable glasses
 drawable ic_arrow_back
 drawable ic_arrow_forward_ios
 drawable ic_coin
@@ -79,7 +81,9 @@ drawable login
 drawable loginlogo
 drawable loginup
 drawable passwd_input
+drawable payment
 drawable re_ceipt_logo
+drawable re_ceiptt
 drawable receipt_image
 drawable red_dot_marker
 drawable signup
@@ -119,6 +123,10 @@ id et_new_password
 id et_password
 id fab_edit_profile_image
 id homeLayout
+id imgAlarm
+id imgGlasses
+id imgLogo
+id imgPayment
 id item_birth_date
 id item_email
 id item_english_name
@@ -136,6 +144,7 @@ id linearLayout
 id logoImage
 id mainContent
 id map_view
+id nameGreetingLayout
 id nav_home
 id nav_host_fragment
 id nav_map
@@ -161,14 +170,16 @@ id til_new_password
 id toolbar
 id toolbar_my_info
 id toolbar_title
+id topBar
 id tvFindId
+id tvGreeting
 id tvPasswordConfirmError
 id tvPasswordHelper
 id tvSignupTitle
 id tvStoreAddress
 id tvStoreName
 id tvStorePhone
-id tvWelcome
+id tvUserName
 id tv_account_status
 id tv_confirm_password_label
 id tv_current_password_label

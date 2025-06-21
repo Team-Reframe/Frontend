@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
@@ -19,7 +21,7 @@ import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final BottomNavigationView bottomNavigation;
@@ -28,24 +30,55 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final FrameLayout container;
 
   @NonNull
-  public final CoordinatorLayout homeLayout;
+  public final ConstraintLayout homeLayout;
 
   @NonNull
-  public final TextView tvWelcome;
+  public final ImageView imgAlarm;
 
-  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView,
+  @NonNull
+  public final ImageView imgGlasses;
+
+  @NonNull
+  public final ImageView imgLogo;
+
+  @NonNull
+  public final ImageView imgPayment;
+
+  @NonNull
+  public final LinearLayout nameGreetingLayout;
+
+  @NonNull
+  public final ConstraintLayout topBar;
+
+  @NonNull
+  public final TextView tvGreeting;
+
+  @NonNull
+  public final TextView tvUserName;
+
+  private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout container,
-      @NonNull CoordinatorLayout homeLayout, @NonNull TextView tvWelcome) {
+      @NonNull ConstraintLayout homeLayout, @NonNull ImageView imgAlarm,
+      @NonNull ImageView imgGlasses, @NonNull ImageView imgLogo, @NonNull ImageView imgPayment,
+      @NonNull LinearLayout nameGreetingLayout, @NonNull ConstraintLayout topBar,
+      @NonNull TextView tvGreeting, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.container = container;
     this.homeLayout = homeLayout;
-    this.tvWelcome = tvWelcome;
+    this.imgAlarm = imgAlarm;
+    this.imgGlasses = imgGlasses;
+    this.imgLogo = imgLogo;
+    this.imgPayment = imgPayment;
+    this.nameGreetingLayout = nameGreetingLayout;
+    this.topBar = topBar;
+    this.tvGreeting = tvGreeting;
+    this.tvUserName = tvUserName;
   }
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -82,16 +115,59 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      CoordinatorLayout homeLayout = (CoordinatorLayout) rootView;
+      ConstraintLayout homeLayout = (ConstraintLayout) rootView;
 
-      id = R.id.tvWelcome;
-      TextView tvWelcome = ViewBindings.findChildViewById(rootView, id);
-      if (tvWelcome == null) {
+      id = R.id.imgAlarm;
+      ImageView imgAlarm = ViewBindings.findChildViewById(rootView, id);
+      if (imgAlarm == null) {
         break missingId;
       }
 
-      return new ActivityHomeBinding((CoordinatorLayout) rootView, bottomNavigation, container,
-          homeLayout, tvWelcome);
+      id = R.id.imgGlasses;
+      ImageView imgGlasses = ViewBindings.findChildViewById(rootView, id);
+      if (imgGlasses == null) {
+        break missingId;
+      }
+
+      id = R.id.imgLogo;
+      ImageView imgLogo = ViewBindings.findChildViewById(rootView, id);
+      if (imgLogo == null) {
+        break missingId;
+      }
+
+      id = R.id.imgPayment;
+      ImageView imgPayment = ViewBindings.findChildViewById(rootView, id);
+      if (imgPayment == null) {
+        break missingId;
+      }
+
+      id = R.id.nameGreetingLayout;
+      LinearLayout nameGreetingLayout = ViewBindings.findChildViewById(rootView, id);
+      if (nameGreetingLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.topBar;
+      ConstraintLayout topBar = ViewBindings.findChildViewById(rootView, id);
+      if (topBar == null) {
+        break missingId;
+      }
+
+      id = R.id.tvGreeting;
+      TextView tvGreeting = ViewBindings.findChildViewById(rootView, id);
+      if (tvGreeting == null) {
+        break missingId;
+      }
+
+      id = R.id.tvUserName;
+      TextView tvUserName = ViewBindings.findChildViewById(rootView, id);
+      if (tvUserName == null) {
+        break missingId;
+      }
+
+      return new ActivityHomeBinding((ConstraintLayout) rootView, bottomNavigation, container,
+          homeLayout, imgAlarm, imgGlasses, imgLogo, imgPayment, nameGreetingLayout, topBar,
+          tvGreeting, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -42,9 +42,12 @@ class LoginActivity : AppCompatActivity() {
                         // val token = loginResponse?.token
 
                         // 성공 → HomeActivity로 이동
+                        val userName = loginResponse?.name ?: "사용자" // ← 여기는 LoginResponse에 name 필드가 있다는 전제
                         val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                        intent.putExtra("USER_NAME", userName) // 이름 같이 넣기
                         startActivity(intent)
                         finish()
+
                     } else {
                         Toast.makeText(this@LoginActivity, "로그인 실패: ${response.code()}", Toast.LENGTH_SHORT).show()
                     }

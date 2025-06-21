@@ -3105,6 +3105,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable alarm
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_input_line
@@ -3150,6 +3151,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable divider_line
 drawable edittext_custom_underline
+drawable glasses
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back
@@ -3266,7 +3268,9 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable passwd_input
+drawable payment
 drawable re_ceipt_logo
+drawable re_ceiptt
 drawable receipt_image
 drawable red_dot_marker
 drawable signup
@@ -3550,6 +3554,10 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgAlarm
+id imgGlasses
+id imgLogo
+id imgPayment
 id immediateStop
 id included
 id indeterminate
@@ -3648,6 +3656,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameGreetingLayout
 id nav_home
 id nav_host_fragment
 id nav_map
@@ -3837,6 +3846,7 @@ id toolbar
 id toolbar_my_info
 id toolbar_title
 id top
+id topBar
 id topPanel
 id touch_outside
 id transitionToEnd
@@ -3851,13 +3861,14 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvFindId
+id tvGreeting
 id tvPasswordConfirmError
 id tvPasswordHelper
 id tvSignupTitle
 id tvStoreAddress
 id tvStoreName
 id tvStorePhone
-id tvWelcome
+id tvUserName
 id tv_account_status
 id tv_confirm_password_label
 id tv_current_password_label

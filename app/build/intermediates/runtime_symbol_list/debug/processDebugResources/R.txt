@@ -3104,6 +3104,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f070074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f070075
 int drawable abc_textfield_search_material 0x7f070076
 int drawable abc_vector_test 0x7f070077
+int drawable alarm 0x7f070125
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable bg_input_line 0x7f07007a
@@ -3149,6 +3150,7 @@ int drawable design_password_eye 0x7f0700a1
 int drawable design_snackbar_background 0x7f0700a2
 int drawable divider_line 0x7f0700a3
 int drawable edittext_custom_underline 0x7f0700a4
+int drawable glasses 0x7f070126
 int drawable googleg_disabled_color_18 0x7f0700a5
 int drawable googleg_standard_color_18 0x7f0700a6
 int drawable ic_arrow_back 0x7f0700a7
@@ -3265,7 +3267,9 @@ int drawable notification_template_icon_low_bg 0x7f070115
 int drawable notification_tile_bg 0x7f070116
 int drawable notify_panel_notification_icon_bg 0x7f070117
 int drawable passwd_input 0x7f070118
+int drawable payment 0x7f070127
 int drawable re_ceipt_logo 0x7f070119
+int drawable re_ceiptt 0x7f070128
 int drawable receipt_image 0x7f07011a
 int drawable red_dot_marker 0x7f07011b
 int drawable signup 0x7f07011c
@@ -3549,6 +3553,10 @@ int id ifRoom 0x7f08010c
 int id ignore 0x7f08010d
 int id ignoreRequest 0x7f08010e
 int id image 0x7f08010f
+int id imgAlarm 0x7f08027e
+int id imgGlasses 0x7f08027f
+int id imgLogo 0x7f080280
+int id imgPayment 0x7f080281
 int id immediateStop 0x7f080110
 int id included 0x7f080111
 int id indeterminate 0x7f080112
@@ -3647,6 +3655,7 @@ int id mtrl_picker_text_input_range_start 0x7f08016e
 int id mtrl_picker_title_text 0x7f08016f
 int id mtrl_view_tag_bottom_padding 0x7f080170
 int id multiply 0x7f080171
+int id nameGreetingLayout 0x7f080282
 int id nav_home 0x7f080172
 int id nav_host_fragment 0x7f080173
 int id nav_map 0x7f080174
@@ -3836,6 +3845,7 @@ int id toolbar 0x7f08022b
 int id toolbar_my_info 0x7f08022c
 int id toolbar_title 0x7f08022d
 int id top 0x7f08022e
+int id topBar 0x7f080283
 int id topPanel 0x7f08022f
 int id touch_outside 0x7f080230
 int id transitionToEnd 0x7f080231
@@ -3850,13 +3860,14 @@ int id transition_scene_layoutid_cache 0x7f080239
 int id transition_transform 0x7f08023a
 int id triangle 0x7f08023b
 int id tvFindId 0x7f08023c
+int id tvGreeting 0x7f08027c
 int id tvPasswordConfirmError 0x7f08023d
 int id tvPasswordHelper 0x7f08023e
 int id tvSignupTitle 0x7f08023f
 int id tvStoreAddress 0x7f080240
 int id tvStoreName 0x7f080241
 int id tvStorePhone 0x7f08027b
-int id tvWelcome 0x7f080242
+int id tvUserName 0x7f08027d
 int id tv_account_status 0x7f080243
 int id tv_confirm_password_label 0x7f080244
 int id tv_current_password_label 0x7f080245
