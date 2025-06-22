@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".ui.scan.PreviewFragment">
+    tools:context=".ui.scan.PreviewActivity"> <!-- context를 Activity로 변경 -->
 
     <ImageView
         android:id="@+id/previewImageView"
@@ -54,5 +54,4 @@
             android:layout_weight="1"
             android:text="등록" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

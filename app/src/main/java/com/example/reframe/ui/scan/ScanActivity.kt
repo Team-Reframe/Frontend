@@ -1,55 +1,58 @@
 package com.example.reframe.ui.scan
 
 import android.content.ContentValues
+import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.reframe.databinding.FragmentScanBinding
+import com.example.reframe.R
+import com.example.reframe.databinding.ActivityScanBinding
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-class ScanFragment : Fragment() {
+class ScanActivity : AppCompatActivity() {
 
-    private var _binding: FragmentScanBinding? = null
-    private val binding get() = _binding!!
-
-    private var imageCapture: ImageCapture? = null
+    private lateinit var binding: ActivityScanBinding
     private lateinit var cameraExecutor: ExecutorService
+    private var imageCapture: ImageCapture? = null
 
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-        uri?.let { navigateToPreview(it) }
+        uri?.let {
+            // 선택된 이미지로 Preview 화면으로 이동
+            navigateToPreview(it)
+        }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = FragmentScanBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityScanBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        startCamera()
         cameraExecutor = Executors.newSingleThreadExecutor()
+        startCamera()
 
-        binding.captureButton.setOnClickListener { takePhoto() }
-        binding.galleryButton.setOnClickListener { pickImageLauncher.launch("image/*") }
+        binding.captureButton.setOnClickListener {
+            val dummyUri = Uri.parse("android.resource://$packageName/${R.drawable.ic_launcher_background}")
+            navigateToPreview(dummyUri)
+        }
+
+        binding.galleryButton.setOnClickListener {
+            pickImageLauncher.launch("image/*")
+        }
     }
 
     private fun startCamera() {
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
         cameraProviderFuture.addListener({
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
             val preview = Preview.Builder().build().also {
@@ -62,9 +65,9 @@ class ScanFragment : Fragment() {
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture)
             } catch (exc: Exception) {
-                Log.e("ScanFragment", "카메라 바인딩 실패", exc)
+                Log.e("ScanActivity", "카메라 바인딩 실패", exc)
             }
-        }, ContextCompat.getMainExecutor(requireContext()))
+        }, ContextCompat.getMainExecutor(this))
     }
 
     private fun takePhoto() {
@@ -75,22 +78,23 @@ class ScanFragment : Fragment() {
             put(MediaStore.MediaColumns.DISPLAY_NAME, name)
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P) {
-                put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/YourAppName")
+                put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/ReframeApp")
             }
         }
 
         val outputOptions = ImageCapture.OutputFileOptions.Builder(
-            requireContext().contentResolver,
+            contentResolver,
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
             contentValues
         ).build()
 
         imageCapture.takePicture(
             outputOptions,
-            ContextCompat.getMainExecutor(requireContext()),
+            ContextCompat.getMainExecutor(this),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onError(exc: ImageCaptureException) {
-                    Log.e("ScanFragment", "사진 저장 실패: ${exc.message}", exc)
+                    Log.e("ScanActivity", "사진 저장 실패: ${exc.message}", exc)
+                    Toast.makeText(baseContext, "사진 저장 실패", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
@@ -101,13 +105,14 @@ class ScanFragment : Fragment() {
     }
 
     private fun navigateToPreview(uri: Uri) {
-        val action = ScanFragmentDirections.actionScanFragmentToPreviewFragment(uri.toString())
-        findNavController().navigate(action)
+        val intent = Intent(this, PreviewActivity::class.java).apply {
+            putExtra("imageUri", uri.toString())
+        }
+        startActivity(intent)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    override fun onDestroy() {
+        super.onDestroy()
         cameraExecutor.shutdown()
-        _binding = null
     }
 }

@@ -52,6 +52,9 @@
         <activity android:name=".PasswordChangeActivity" />
         <activity android:name=".WithdrawalActivity" />
         <activity android:name=".StoreDetailActivity" />
+        <activity android:name=".ui.scan.ScanActivity" />
+        <activity android:name=".ui.scan.PreviewActivity" />
+        <activity android:name=".ui.scan.RewardActivity" />
 
     </application>
 </manifest>

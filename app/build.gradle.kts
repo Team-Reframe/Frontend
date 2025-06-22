@@ -67,6 +67,7 @@ dependencies {
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
 
     val camerax_version = "1.3.1"
     implementation ("androidx.camera:camera-core:${camerax_version}")

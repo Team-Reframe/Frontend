@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.scan.ScanFragment">
+    tools:context=".ui.scan.ScanActivity">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
@@ -20,35 +20,44 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="#1C1C1E"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/galleryButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="갤러리"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_gallery" />
+
+        <View
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="갤러리"
-            android:textColor="@color/white"
-            style="?android:attr/borderlessButtonStyle"/>
+            android:layout_height="1dp"
+            android:layout_weight="1" />
 
         <ImageButton
             android:id="@+id/captureButton"
             android:layout_width="72dp"
             android:layout_height="72dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:background="@drawable/ic_camera_shutter"
             android:contentDescription="사진 촬영" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="56dp"
+            android:layout_height="56dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
