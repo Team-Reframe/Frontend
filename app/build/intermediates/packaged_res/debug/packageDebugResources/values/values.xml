@@ -108,6 +108,13 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item> 
     </style>
+    <style name="LeftRoundedShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
     <style name="MyInfoToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">@dimen/toolbar_title_text_size</item> 
         <item name="android:textStyle">bold</item> 
@@ -132,6 +139,13 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="RightRoundedShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
     </style>
     <style name="ShapeAppearance.App.CornerSize50Percent" parent="">
         <item name="cornerFamily">rounded</item>

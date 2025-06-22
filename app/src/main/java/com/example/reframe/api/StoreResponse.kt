@@ -10,5 +10,6 @@ data class StoreResponse(
     val description: String,
     val phone: String,
     val openingHours: String,
-    var imageResId: Int = 0
+    var imageResId: Int = 0,
+    var isLiked: Boolean = false
 )

@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#004098" /> <!-- ✅ 새로운 색상 -->
+    <corners android:bottomLeftRadius="12dp" /> <!-- 왼쪽 버튼이니까 -->
+</shape>

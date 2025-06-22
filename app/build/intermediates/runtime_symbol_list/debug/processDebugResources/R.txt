@@ -3107,8 +3107,12 @@ int drawable abc_vector_test 0x7f070077
 int drawable alarm 0x7f070125
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
+int drawable bg_btn_payment 0x7f070129
+int drawable bg_btn_point 0x7f07012a
 int drawable bg_input_line 0x7f07007a
 int drawable bg_input_rounded 0x7f07007b
+int drawable bg_oval_card 0x7f07012b
+int drawable bg_point_card 0x7f07012c
 int drawable bg_signup_border 0x7f07007c
 int drawable bread 0x7f07007d
 int drawable btn_checkbox_checked_mtrl 0x7f07007e
@@ -3166,6 +3170,8 @@ int drawable ic_clear_black_24 0x7f0700b0
 int drawable ic_clock_black_24dp 0x7f0700b1
 int drawable ic_coin 0x7f0700b2
 int drawable ic_edit_pencil 0x7f0700b3
+int drawable ic_heartfulll 0x7f070131
+int drawable ic_heartt 0x7f070132
 int drawable ic_home 0x7f0700b4
 int drawable ic_keyboard_black_24dp 0x7f0700b5
 int drawable ic_launcher_background 0x7f0700b6
@@ -3184,8 +3190,10 @@ int drawable ic_payment 0x7f0700c2
 int drawable ic_person 0x7f0700c3
 int drawable ic_person_placeholder 0x7f0700c4
 int drawable ic_receipt 0x7f0700c5
+int drawable ic_receipt_image 0x7f070134
 int drawable ic_scanner 0x7f0700c6
 int drawable ic_search_black_24 0x7f0700c7
+int drawable ic_starr 0x7f070133
 int drawable ic_tune 0x7f0700c8
 int drawable ic_visibility_off 0x7f0700c9
 int drawable ic_visibility_on 0x7f0700ca
@@ -3268,6 +3276,9 @@ int drawable notification_tile_bg 0x7f070116
 int drawable notify_panel_notification_icon_bg 0x7f070117
 int drawable passwd_input 0x7f070118
 int drawable payment 0x7f070127
+int drawable paymentclick 0x7f07012d
+int drawable pointcard 0x7f070130
+int drawable pointclicklogo 0x7f07012e
 int drawable re_ceipt_logo 0x7f070119
 int drawable re_ceiptt 0x7f070128
 int drawable receipt_image 0x7f07011a
@@ -3281,6 +3292,7 @@ int drawable start_notice 0x7f070121
 int drawable test_level_drawable 0x7f070122
 int drawable tooltip_frame_dark 0x7f070123
 int drawable tooltip_frame_light 0x7f070124
+int drawable wallet 0x7f07012f
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -3401,8 +3413,10 @@ int id bounceBoth 0x7f080074
 int id bounceEnd 0x7f080075
 int id bounceStart 0x7f080076
 int id btnBack 0x7f080077
+int id btnLeftTransparent 0x7f08028e
 int id btnLogin 0x7f080078
 int id btnNext 0x7f080079
+int id btnRightTransparent 0x7f08028f
 int id btnSignup 0x7f08007a
 int id btnStart 0x7f08007b
 int id btn_change_password 0x7f08007c
@@ -3543,6 +3557,7 @@ int id hideable 0x7f080102
 int id home 0x7f080103
 int id homeAsUp 0x7f080104
 int id homeLayout 0x7f080105
+int id home_store_list 0x7f080290
 int id honorRequest 0x7f080106
 int id horizontal 0x7f080107
 int id horizontal_only 0x7f080108
@@ -3557,6 +3572,8 @@ int id imgAlarm 0x7f08027e
 int id imgGlasses 0x7f08027f
 int id imgLogo 0x7f080280
 int id imgPayment 0x7f080281
+int id imgPointCard 0x7f08028d
+int id imgStore 0x7f080294
 int id immediateStop 0x7f080110
 int id included 0x7f080111
 int id indeterminate 0x7f080112
@@ -3571,7 +3588,10 @@ int id item_name 0x7f08011a
 int id item_password 0x7f08011b
 int id item_phone_number 0x7f08011c
 int id item_touch_helper_previous_elevation 0x7f08011d
+int id ivHeart 0x7f080295
 int id ivLogo 0x7f08011e
+int id ivReceipt 0x7f08029b
+int id ivStar 0x7f080296
 int id ivSuccessTitle 0x7f08011f
 int id iv_arrow 0x7f080120
 int id iv_filter 0x7f080121
@@ -3713,6 +3733,7 @@ int id pathRelative 0x7f0801a7
 int id peekHeight 0x7f0801a8
 int id percent 0x7f0801a9
 int id pin 0x7f0801aa
+int id pointCard 0x7f080288
 int id position 0x7f0801ab
 int id postLayout 0x7f0801ac
 int id pressed 0x7f0801ad
@@ -3738,6 +3759,7 @@ int id save_non_transition_alpha 0x7f0801c0
 int id save_overlay_view 0x7f0801c1
 int id sawtooth 0x7f0801c2
 int id scale 0x7f0801c3
+int id scoreLayout 0x7f080299
 int id screen 0x7f0801c4
 int id scroll 0x7f0801c5
 int id scrollIndicatorDown 0x7f0801c6
@@ -3861,8 +3883,15 @@ int id transition_transform 0x7f08023a
 int id triangle 0x7f08023b
 int id tvFindId 0x7f08023c
 int id tvGreeting 0x7f08027c
+int id tvHomeBestMore 0x7f080291
+int id tvHomeBestSub 0x7f080292
+int id tvHomeBestTitle 0x7f080293
 int id tvPasswordConfirmError 0x7f08023d
 int id tvPasswordHelper 0x7f08023e
+int id tvPointAmount 0x7f08028a
+int id tvPointDate 0x7f08028b
+int id tvRating 0x7f080298
+int id tvReviewCount 0x7f08029a
 int id tvSignupTitle 0x7f08023f
 int id tvStoreAddress 0x7f080240
 int id tvStoreName 0x7f080241
@@ -4072,6 +4101,7 @@ int layout design_text_input_end_icon 0x7f0b0038
 int layout design_text_input_start_icon 0x7f0b0039
 int layout ime_base_split_test_activity 0x7f0b003a
 int layout ime_secondary_split_test_activity 0x7f0b003b
+int layout item_home_store 0x7f0b007d
 int layout item_store 0x7f0b003c
 int layout list_item_my_info 0x7f0b003d
 int layout list_item_point_history 0x7f0b003e
@@ -4677,6 +4707,7 @@ int style FabShapeAppearanceOverlay 0x7f110125
 int style LabelBadgeStyle 0x7f110126
 int style LabelStyle 0x7f110127
 int style LabelTextStyle 0x7f110128
+int style LeftRoundedShape 0x7f110474
 int style MaterialAlertDialog_Material3 0x7f110129
 int style MaterialAlertDialog_Material3_Animation 0x7f11012a
 int style MaterialAlertDialog_Material3_Body_Text 0x7f11012b
@@ -4715,6 +4746,7 @@ int style Platform_Widget_AppCompat_Spinner 0x7f11014b
 int style PolygonStyle 0x7f11014c
 int style ProfileMenuDivider 0x7f11014d
 int style ProfileMenuItem 0x7f11014e
+int style RightRoundedShape 0x7f110475
 int style RouteLineStyle 0x7f11014f
 int style RtlOverlay_DialogWindowTitle_AppCompat 0x7f110150
 int style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem 0x7f110151

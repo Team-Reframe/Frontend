@@ -3108,8 +3108,12 @@ drawable abc_vector_test
 drawable alarm
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_btn_payment
+drawable bg_btn_point
 drawable bg_input_line
 drawable bg_input_rounded
+drawable bg_oval_card
+drawable bg_point_card
 drawable bg_signup_border
 drawable bread
 drawable btn_checkbox_checked_mtrl
@@ -3167,6 +3171,8 @@ drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_coin
 drawable ic_edit_pencil
+drawable ic_heartfulll
+drawable ic_heartt
 drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3185,8 +3191,10 @@ drawable ic_payment
 drawable ic_person
 drawable ic_person_placeholder
 drawable ic_receipt
+drawable ic_receipt_image
 drawable ic_scanner
 drawable ic_search_black_24
+drawable ic_starr
 drawable ic_tune
 drawable ic_visibility_off
 drawable ic_visibility_on
@@ -3269,6 +3277,9 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable passwd_input
 drawable payment
+drawable paymentclick
+drawable pointcard
+drawable pointclicklogo
 drawable re_ceipt_logo
 drawable re_ceiptt
 drawable receipt_image
@@ -3282,6 +3293,7 @@ drawable start_notice
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable wallet
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3402,8 +3414,10 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnBack
+id btnLeftTransparent
 id btnLogin
 id btnNext
+id btnRightTransparent
 id btnSignup
 id btnStart
 id btn_change_password
@@ -3544,6 +3558,7 @@ id hideable
 id home
 id homeAsUp
 id homeLayout
+id home_store_list
 id honorRequest
 id horizontal
 id horizontal_only
@@ -3558,6 +3573,8 @@ id imgAlarm
 id imgGlasses
 id imgLogo
 id imgPayment
+id imgPointCard
+id imgStore
 id immediateStop
 id included
 id indeterminate
@@ -3572,7 +3589,10 @@ id item_name
 id item_password
 id item_phone_number
 id item_touch_helper_previous_elevation
+id ivHeart
 id ivLogo
+id ivReceipt
+id ivStar
 id ivSuccessTitle
 id iv_arrow
 id iv_filter
@@ -3714,6 +3734,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pointCard
 id position
 id postLayout
 id pressed
@@ -3739,6 +3760,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scoreLayout
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3862,8 +3884,15 @@ id transition_transform
 id triangle
 id tvFindId
 id tvGreeting
+id tvHomeBestMore
+id tvHomeBestSub
+id tvHomeBestTitle
 id tvPasswordConfirmError
 id tvPasswordHelper
+id tvPointAmount
+id tvPointDate
+id tvRating
+id tvReviewCount
 id tvSignupTitle
 id tvStoreAddress
 id tvStoreName
@@ -4073,6 +4102,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_home_store
 layout item_store
 layout list_item_my_info
 layout list_item_point_history
@@ -4678,6 +4708,7 @@ style FabShapeAppearanceOverlay
 style LabelBadgeStyle
 style LabelStyle
 style LabelTextStyle
+style LeftRoundedShape
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
@@ -4716,6 +4747,7 @@ style Platform_Widget_AppCompat_Spinner
 style PolygonStyle
 style ProfileMenuDivider
 style ProfileMenuItem
+style RightRoundedShape
 style RouteLineStyle
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem

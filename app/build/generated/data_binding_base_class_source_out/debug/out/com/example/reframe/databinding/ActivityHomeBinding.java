@@ -4,6 +4,7 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
@@ -27,10 +29,19 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
+  public final Button btnLeftTransparent;
+
+  @NonNull
+  public final Button btnRightTransparent;
+
+  @NonNull
   public final FrameLayout container;
 
   @NonNull
   public final ConstraintLayout homeLayout;
+
+  @NonNull
+  public final RecyclerView homeStoreList;
 
   @NonNull
   public final ImageView imgAlarm;
@@ -45,7 +56,13 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final ImageView imgPayment;
 
   @NonNull
+  public final ImageView imgPointCard;
+
+  @NonNull
   public final LinearLayout nameGreetingLayout;
+
+  @NonNull
+  public final ConstraintLayout pointCard;
 
   @NonNull
   public final ConstraintLayout topBar;
@@ -54,25 +71,55 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final TextView tvGreeting;
 
   @NonNull
+  public final TextView tvHomeBestMore;
+
+  @NonNull
+  public final TextView tvHomeBestSub;
+
+  @NonNull
+  public final TextView tvHomeBestTitle;
+
+  @NonNull
+  public final TextView tvPointAmount;
+
+  @NonNull
+  public final TextView tvPointDate;
+
+  @NonNull
   public final TextView tvUserName;
 
   private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout container,
-      @NonNull ConstraintLayout homeLayout, @NonNull ImageView imgAlarm,
-      @NonNull ImageView imgGlasses, @NonNull ImageView imgLogo, @NonNull ImageView imgPayment,
-      @NonNull LinearLayout nameGreetingLayout, @NonNull ConstraintLayout topBar,
-      @NonNull TextView tvGreeting, @NonNull TextView tvUserName) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnLeftTransparent,
+      @NonNull Button btnRightTransparent, @NonNull FrameLayout container,
+      @NonNull ConstraintLayout homeLayout, @NonNull RecyclerView homeStoreList,
+      @NonNull ImageView imgAlarm, @NonNull ImageView imgGlasses, @NonNull ImageView imgLogo,
+      @NonNull ImageView imgPayment, @NonNull ImageView imgPointCard,
+      @NonNull LinearLayout nameGreetingLayout, @NonNull ConstraintLayout pointCard,
+      @NonNull ConstraintLayout topBar, @NonNull TextView tvGreeting,
+      @NonNull TextView tvHomeBestMore, @NonNull TextView tvHomeBestSub,
+      @NonNull TextView tvHomeBestTitle, @NonNull TextView tvPointAmount,
+      @NonNull TextView tvPointDate, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
+    this.btnLeftTransparent = btnLeftTransparent;
+    this.btnRightTransparent = btnRightTransparent;
     this.container = container;
     this.homeLayout = homeLayout;
+    this.homeStoreList = homeStoreList;
     this.imgAlarm = imgAlarm;
     this.imgGlasses = imgGlasses;
     this.imgLogo = imgLogo;
     this.imgPayment = imgPayment;
+    this.imgPointCard = imgPointCard;
     this.nameGreetingLayout = nameGreetingLayout;
+    this.pointCard = pointCard;
     this.topBar = topBar;
     this.tvGreeting = tvGreeting;
+    this.tvHomeBestMore = tvHomeBestMore;
+    this.tvHomeBestSub = tvHomeBestSub;
+    this.tvHomeBestTitle = tvHomeBestTitle;
+    this.tvPointAmount = tvPointAmount;
+    this.tvPointDate = tvPointDate;
     this.tvUserName = tvUserName;
   }
 
@@ -109,6 +156,18 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnLeftTransparent;
+      Button btnLeftTransparent = ViewBindings.findChildViewById(rootView, id);
+      if (btnLeftTransparent == null) {
+        break missingId;
+      }
+
+      id = R.id.btnRightTransparent;
+      Button btnRightTransparent = ViewBindings.findChildViewById(rootView, id);
+      if (btnRightTransparent == null) {
+        break missingId;
+      }
+
       id = R.id.container;
       FrameLayout container = ViewBindings.findChildViewById(rootView, id);
       if (container == null) {
@@ -116,6 +175,12 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
 
       ConstraintLayout homeLayout = (ConstraintLayout) rootView;
+
+      id = R.id.home_store_list;
+      RecyclerView homeStoreList = ViewBindings.findChildViewById(rootView, id);
+      if (homeStoreList == null) {
+        break missingId;
+      }
 
       id = R.id.imgAlarm;
       ImageView imgAlarm = ViewBindings.findChildViewById(rootView, id);
@@ -141,9 +206,21 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imgPointCard;
+      ImageView imgPointCard = ViewBindings.findChildViewById(rootView, id);
+      if (imgPointCard == null) {
+        break missingId;
+      }
+
       id = R.id.nameGreetingLayout;
       LinearLayout nameGreetingLayout = ViewBindings.findChildViewById(rootView, id);
       if (nameGreetingLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.pointCard;
+      ConstraintLayout pointCard = ViewBindings.findChildViewById(rootView, id);
+      if (pointCard == null) {
         break missingId;
       }
 
@@ -159,15 +236,47 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvHomeBestMore;
+      TextView tvHomeBestMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvHomeBestMore == null) {
+        break missingId;
+      }
+
+      id = R.id.tvHomeBestSub;
+      TextView tvHomeBestSub = ViewBindings.findChildViewById(rootView, id);
+      if (tvHomeBestSub == null) {
+        break missingId;
+      }
+
+      id = R.id.tvHomeBestTitle;
+      TextView tvHomeBestTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvHomeBestTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPointAmount;
+      TextView tvPointAmount = ViewBindings.findChildViewById(rootView, id);
+      if (tvPointAmount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPointDate;
+      TextView tvPointDate = ViewBindings.findChildViewById(rootView, id);
+      if (tvPointDate == null) {
+        break missingId;
+      }
+
       id = R.id.tvUserName;
       TextView tvUserName = ViewBindings.findChildViewById(rootView, id);
       if (tvUserName == null) {
         break missingId;
       }
 
-      return new ActivityHomeBinding((ConstraintLayout) rootView, bottomNavigation, container,
-          homeLayout, imgAlarm, imgGlasses, imgLogo, imgPayment, nameGreetingLayout, topBar,
-          tvGreeting, tvUserName);
+      return new ActivityHomeBinding((ConstraintLayout) rootView, bottomNavigation,
+          btnLeftTransparent, btnRightTransparent, container, homeLayout, homeStoreList, imgAlarm,
+          imgGlasses, imgLogo, imgPayment, imgPointCard, nameGreetingLayout, pointCard, topBar,
+          tvGreeting, tvHomeBestMore, tvHomeBestSub, tvHomeBestTitle, tvPointAmount, tvPointDate,
+          tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

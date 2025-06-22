@@ -18,6 +18,15 @@ interface ApiService {
     @GET("members/me")
     fun getMyInfo(@Header("Authorization") token: String): Call<MyInfoResponse>
 
+    @GET("total")
+    fun getTotalPoints(@Query("memberId") memberId: Long): Call<TotalResponse>
+
+    @GET("reviews/store/{storeId}")
+    fun getStoreReviews(
+        @Path("storeId") storeId: Long
+    ): Call<List<ReviewResponse>>
+
+
     @POST("stores/import")
     fun importStore(@Body request: StoreImportRequest): Call<StoreResponse>
 
@@ -33,5 +42,13 @@ interface ApiService {
         @Query("swLng") swLng: Double,
         @Query("neLat") neLat: Double,
         @Query("neLng") neLng: Double
+
     ): Call<List<StoreResponse>>
+
+    @POST("love/add")
+    fun addLove(
+        @Query("memberId") memberId: Long,
+        @Query("storeId") storeId: Long
+    ): Call<Void>
+
 }
