@@ -12,7 +12,7 @@ import com.example.reframe.MapActivity
 import com.example.reframe.ProfileActivity
 import com.example.reframe.R
 import com.example.reframe.databinding.ActivityScanBinding
-import com.example.reframe.ui.history.ReceiptHistoryActivity
+import com.example.reframe.ui.history.ReceiptHistoryFragment
 
 class ScanActivity : AppCompatActivity() {
 
@@ -67,7 +67,7 @@ class ScanActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> navigateTo(HomeActivity::class.java)
-                R.id.nav_receipt -> navigateTo(ReceiptHistoryActivity::class.java)
+                R.id.nav_receipt -> navigateTo(ReceiptHistoryFragment::class.java)
                 R.id.nav_map -> navigateTo(MapActivity::class.java)
                 R.id.nav_profile -> navigateTo(ProfileActivity::class.java)
                 R.id.nav_scan -> {

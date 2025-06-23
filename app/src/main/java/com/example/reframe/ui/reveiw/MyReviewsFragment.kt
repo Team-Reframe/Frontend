@@ -1,27 +1,33 @@
 package com.example.reframe.ui.reveiw
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.reframe.data.SessionManager
 import com.example.reframe.data.dto.MyReviewResponse
 import com.example.reframe.databinding.ActivityMyReviewsBinding
 import com.example.reframe.ui.history.ReceiptViewModel
 import com.example.reframe.ui.scan.UiState
 
-class MyReviewsActivity : AppCompatActivity() {
+class MyReviewsFragment : Fragment() {
 
-    private lateinit var binding: ActivityMyReviewsBinding
+    private var _binding: ActivityMyReviewsBinding? = null
+    private val binding get() = _binding!!
     private val viewModel: ReceiptViewModel by viewModels()
     private lateinit var adapter: MyReviewsAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMyReviewsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = ActivityMyReviewsBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         observeViewModel()
         loadDummyData()
@@ -30,7 +36,7 @@ class MyReviewsActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         adapter = MyReviewsAdapter(
             onEditClick = { review ->
-                Toast.makeText(this, "수정: ${review.reviewId}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "수정: ${review.reviewId}", Toast.LENGTH_SHORT).show()
             },
             onDeleteClick = { review ->
                 showDeleteConfirmDialog(review.reviewId)
@@ -67,29 +73,33 @@ class MyReviewsActivity : AppCompatActivity() {
     }
 
     private fun observeViewModel() {
-
-        viewModel.reviewDeleteState.observe(this) { state ->
+        viewModel.reviewDeleteState.observe(viewLifecycleOwner) { state ->
             when(state) {
                 is UiState.Success -> {
-                    Toast.makeText(this, "리뷰가 삭제되었습니다.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "리뷰가 삭제되었습니다.", Toast.LENGTH_SHORT).show()
                 }
-                is UiState.Error -> Toast.makeText(this, state.message, Toast.LENGTH_SHORT).show()
+                is UiState.Error -> Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
                 else -> {}
             }
         }
     }
 
     private fun showDeleteConfirmDialog(reviewId: Long) {
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(requireContext())
             .setTitle("리뷰 삭제")
             .setMessage("정말로 이 리뷰를 삭제하시겠습니까?")
             .setPositiveButton("삭제") { _, _ ->
-                val memberId = SessionManager.getMemberId(this)
+                val memberId = SessionManager.getMemberId(requireContext())
                 if (memberId != -1L) {
                     viewModel.deleteReview(reviewId, memberId)
                 }
             }
             .setNegativeButton("취소", null)
             .show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -9,13 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.reframe.data.SessionManager
 import com.example.reframe.databinding.ActivityProfileBinding
-import com.example.reframe.ui.history.ReceiptHistoryActivity
-import com.example.reframe.ui.profile.MyInfoFragment
-import com.example.reframe.ui.profile.PasswordChangeFragment
-import com.example.reframe.ui.profile.PointHistoryFragment
+import com.example.reframe.ui.history.ReceiptHistoryFragment
 import com.example.reframe.ui.profile.ProfileMenuFragment
 import com.example.reframe.ui.profile.ProfileViewModel
-import com.example.reframe.ui.profile.WithdrawalFragment
 import com.example.reframe.ui.scan.ScanActivity
 import com.example.reframe.ui.scan.UiState
 
@@ -90,7 +86,7 @@ class ProfileActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> navigateTo(HomeActivity::class.java)
-                R.id.nav_receipt -> navigateTo(ReceiptHistoryActivity::class.java)
+                R.id.nav_receipt -> navigateTo(ReceiptHistoryFragment::class.java)
                 R.id.nav_scan -> navigateTo(ScanActivity::class.java)
                 R.id.nav_map -> navigateTo(MapActivity::class.java)
                 R.id.nav_profile -> {
