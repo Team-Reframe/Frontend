@@ -1,4 +1,4 @@
-package com.example.reframe.ui.receipt
+package com.example.reframe.ui.reveiw
 
 import android.os.Bundle
 import android.widget.Toast
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.reframe.data.SessionManager
 import com.example.reframe.data.dto.MyReviewResponse
 import com.example.reframe.databinding.ActivityMyReviewsBinding
+import com.example.reframe.ui.history.ReceiptViewModel
 import com.example.reframe.ui.scan.UiState
 import java.text.SimpleDateFormat
 import java.util.*

@@ -1,14 +1,14 @@
-package com.example.reframe.ui.receipt
+package com.example.reframe.ui.history
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import com.example.reframe.R
 import com.example.reframe.data.SessionManager
 import com.example.reframe.data.dto.ReceiptHistoryResponse
@@ -19,6 +19,11 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.ViewGroup
+import com.example.reframe.HomeActivity
+import com.example.reframe.MapActivity
+import com.example.reframe.ui.scan.ScanActivity
+import com.example.reframe.ProfileActivity
+import com.example.reframe.ui.reveiw.MyReviewsActivity
 
 class ReceiptHistoryActivity : AppCompatActivity() {
 
@@ -28,6 +33,7 @@ class ReceiptHistoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         binding = ActivityReceiptHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,6 +42,7 @@ class ReceiptHistoryActivity : AppCompatActivity() {
         setupRecyclerView()
         setupClickListeners()
         observeViewModel()
+        setupBottomNavigation()
 
         // 데이터 로드
         if (memberId != -1L) {
@@ -121,5 +128,32 @@ class ReceiptHistoryActivity : AppCompatActivity() {
             val height = ViewGroup.LayoutParams.WRAP_CONTENT
             setLayout(width, height)
         }
+        
+    }
+
+    private fun setupBottomNavigation() {
+        val bottomNavigation = binding.bottomNavigation
+        bottomNavigation.selectedItemId = R.id.nav_receipt // 내역 아이템을 선택된 상태로 표시
+
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> navigateTo(HomeActivity::class.java)
+                R.id.nav_receipt -> {
+                    // 이미 현재 화면이므로 아무것도 하지 않음
+                    true
+                }
+                R.id.nav_scan -> navigateTo(ScanActivity::class.java)
+                R.id.nav_map -> navigateTo(MapActivity::class.java)
+                R.id.nav_profile -> navigateTo(ProfileActivity::class.java)
+                else -> false
+            }
+        }
+    }
+    // 중복 코드를 줄이기 위한 함수
+    private fun navigateTo(activityClass: Class<*>): Boolean {
+        startActivity(Intent(this, activityClass))
+        overridePendingTransition(0, 0) // 화면 전환 애니메이션 제거
+        finish() // 현재 액티비티 종료
+        return true
     }
 }

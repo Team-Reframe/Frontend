@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.reframe.data.SessionManager
 import com.example.reframe.databinding.ActivityProfileBinding
 import com.example.reframe.ui.profile.ProfileViewModel
+import com.example.reframe.ui.scan.ScanActivity
+import com.example.reframe.ui.history.ReceiptHistoryActivity
 import com.example.reframe.ui.scan.UiState
 
 class ProfileActivity : AppCompatActivity() {
@@ -77,9 +79,9 @@ class ProfileActivity : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> navigateTo(HomeActivity::class.java)
-                R.id.nav_receipt -> navigateTo(ReceiptActivity::class.java) // 메뉴 ID가 nav_receipt라고 가정
-                R.id.nav_scanner -> navigateTo(ScannerActivity::class.java) // 메뉴 ID가 nav_scanner라고 가정
-                R.id.nav_map -> navigateTo(MapActivity::class.java) // 메뉴 ID가 nav_map이라고 가정
+                R.id.nav_receipt -> navigateTo(ReceiptHistoryActivity::class.java)
+                R.id.nav_scan -> navigateTo(ScanActivity::class.java)
+                R.id.nav_map -> navigateTo(MapActivity::class.java)
                 R.id.nav_profile -> {
                     // 이미 현재 화면이므로 아무것도 하지 않음
                     true

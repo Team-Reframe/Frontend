@@ -1,4 +1,4 @@
-package com.example.reframe.ui.receipt
+package com.example.reframe.ui.history
 
 import androidx.lifecycle.*
 import com.example.reframe.data.dto.*

@@ -1,4 +1,4 @@
-package com.example.reframe.ui.receipt
+package com.example.reframe.ui.reveiw
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
