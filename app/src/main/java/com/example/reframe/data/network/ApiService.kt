@@ -1,8 +1,6 @@
 package com.example.reframe.data.network
 
-import com.example.reframe.data.dto.PointResponse
-import com.example.reframe.data.dto.ReceiptUploadResponse
-import com.example.reframe.data.dto.RewardRequest
+import com.example.reframe.data.dto.*
 import okhttp3.MultipartBody
 import retrofit2.Response
 import retrofit2.http.*
@@ -20,4 +18,33 @@ interface ApiService {
     suspend fun requestReward(
         @Body rewardRequest: RewardRequest
     ): Response<PointResponse>
+
+    @POST("/member/sign-up")
+    suspend fun signUp(@Body request: SignUpRequest): Response<SignUpResponse>
+
+    @POST("/auth/login")
+    suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
+
+    // 포인트 내역 관련
+    @GET("/point/total")
+    suspend fun getTotalPoints(@Query("memberId") memberId: Long): Response<TotalPointResponse>
+
+    @GET("/point/history")
+    suspend fun getReceiptHistory(@Query("memberId") memberId: Long): Response<List<ReceiptHistoryResponse>>
+
+    // 리뷰 관련
+    @POST("/reviews")
+    suspend fun postReview(@Body reviewRequest: ReviewRequest): Response<Unit>
+
+    @GET("/reviews/my")
+    suspend fun getMyReviews(@Query("memberId") memberId: Long): Response<List<MyReviewResponse>>
+
+    @DELETE("/reviews/{reviewId}")
+    suspend fun deleteReview(
+        @Path("reviewId") reviewId: Long,
+        @Query("memberId") memberId: Long
+    ): Response<Unit>
+
+    @GET("/reviews/{reviewId}")
+    suspend fun getReviewDetail(@Path("reviewId") reviewId: Long): Response<ReviewDetailResponse>
 }
