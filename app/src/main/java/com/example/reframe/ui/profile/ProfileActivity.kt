@@ -6,11 +6,17 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.reframe.data.SessionManager
 import com.example.reframe.databinding.ActivityProfileBinding
-import com.example.reframe.ui.profile.ProfileViewModel
-import com.example.reframe.ui.scan.ScanActivity
 import com.example.reframe.ui.history.ReceiptHistoryActivity
+import com.example.reframe.ui.profile.MyInfoFragment
+import com.example.reframe.ui.profile.PasswordChangeFragment
+import com.example.reframe.ui.profile.PointHistoryFragment
+import com.example.reframe.ui.profile.ProfileMenuFragment
+import com.example.reframe.ui.profile.ProfileViewModel
+import com.example.reframe.ui.profile.WithdrawalFragment
+import com.example.reframe.ui.scan.ScanActivity
 import com.example.reframe.ui.scan.UiState
 
 class ProfileActivity : AppCompatActivity() {
@@ -23,23 +29,46 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupClickListeners()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fl_profile_container, ProfileMenuFragment())
+                .commit()
+        }
+
         setupBottomNavigation()
         observeViewModel()
     }
 
-    private fun setupClickListeners() {
-        // ... (다른 클릭 리스너들)
-        binding.tvLogout.setOnClickListener {
-            showLogoutDialog()
-        }
+    fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fl_profile_container, fragment)
+            .addToBackStack(null) // 뒤로가기 지원
+            .commit()
+    }
+
+    fun showLogoutDialog() {
+        AlertDialog.Builder(this)
+            .setMessage("로그아웃 하시겠습니까?")
+            .setPositiveButton("YES") { _, _ ->
+                val token = SessionManager.getToken(this)
+                if (!token.isNullOrEmpty()) {
+                    viewModel.logout(token)
+                } else {
+                    SessionManager.clearData(this)
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
+            }
+            .setNegativeButton("NO", null)
+            .show()
     }
 
     private fun observeViewModel() {
         viewModel.logoutState.observe(this) { state ->
             when (state) {
                 is UiState.Success -> {
-                    // 세션 데이터 클리어 및 로그인 화면으로 이동
                     SessionManager.clearData(this)
                     val intent = Intent(this, LoginActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -54,27 +83,9 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
-    private fun showLogoutDialog() {
-        AlertDialog.Builder(this)
-            .setMessage("로그아웃 하시겠습니까?")
-            .setPositiveButton("YES") { _, _ ->
-                val token = SessionManager.getToken(this)
-                if (!token.isNullOrEmpty()) {
-                    viewModel.logout(token)
-                } else {
-                    // 토큰이 없는 경우(비정상)에도 로컬 데이터 지우고 로그인 화면으로
-                    SessionManager.clearData(this)
-                    val intent = Intent(this, LoginActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                }
-            }
-            .setNegativeButton("NO", null)
-            .show()
-    }
     private fun setupBottomNavigation() {
         val bottomNavigation = binding.bottomNavigation
-        bottomNavigation.selectedItemId = R.id.nav_profile // 프로필 아이템을 선택된 상태로 표시
+        bottomNavigation.selectedItemId = R.id.nav_profile
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -83,18 +94,22 @@ class ProfileActivity : AppCompatActivity() {
                 R.id.nav_scan -> navigateTo(ScanActivity::class.java)
                 R.id.nav_map -> navigateTo(MapActivity::class.java)
                 R.id.nav_profile -> {
-                    // 이미 현재 화면이므로 아무것도 하지 않음
+                    // 첫 화면(메뉴)으로 돌아가기
+                    supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fl_profile_container, ProfileMenuFragment())
+                        .commit()
                     true
                 }
                 else -> false
             }
         }
     }
-    // 중복 코드를 줄이기 위한 함수
+
     private fun navigateTo(activityClass: Class<*>): Boolean {
         startActivity(Intent(this, activityClass))
-        overridePendingTransition(0, 0) // 화면 전환 애니메이션 제거
-        finish() // 현재 액티비티 종료
+        overridePendingTransition(0, 0)
+        finish()
         return true
     }
 }

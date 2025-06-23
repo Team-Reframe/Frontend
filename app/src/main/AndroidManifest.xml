@@ -44,13 +44,13 @@
         <activity android:name=".SignupActivity" android:exported="true" />
         <activity android:name=".MainActivity" android:exported="true" />
         <activity android:name=".MapActivity" android:exported="true" />
-        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".ui.profile.ProfileActivity" android:exported="true" />
         <activity android:name=".ReceiptActivity" android:exported="true" />
         <activity android:name=".ScannerActivity" android:exported="true" />
-        <activity android:name=".MyInfoActivity" />
-        <activity android:name=".PointHistoryActivity" />
-        <activity android:name=".PasswordChangeActivity" />
-        <activity android:name=".WithdrawalActivity" />
+        <activity android:name=".ui.profile.MyInfoFragment" />
+        <activity android:name=".ui.profile.PointHistoryFragment" />
+        <activity android:name=".ui.profile.PasswordChangeFragment" />
+        <activity android:name=".ui.profile.WithdrawalFragment" />
         <activity android:name=".StoreDetailActivity" />
         <activity android:name=".ui.scan.ScanActivity" />
         <activity android:name=".ui.scan.PreviewActivity" />

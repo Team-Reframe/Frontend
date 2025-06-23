@@ -1,29 +1,38 @@
-package com.example.reframe
+package com.example.reframe.ui.profile
 
 import android.os.Bundle
-import android.view.MenuItem
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.reframe.databinding.ActivityPasswordChangeBinding
 
-class PasswordChangeActivity : AppCompatActivity() {
+class PasswordChangeFragment : Fragment() {
 
-    private lateinit var binding: ActivityPasswordChangeBinding
+    private var _binding: ActivityPasswordChangeBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityPasswordChangeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = ActivityPasswordChangeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupToolbar()
         setupListeners()
     }
 
     private fun setupToolbar() {
-        setSupportActionBar(binding.toolbar)
-        supportActionBar?.apply {
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (activity as AppCompatActivity).supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowTitleEnabled(false)
+        }
+        binding.toolbar.setNavigationOnClickListener {
+            parentFragmentManager.popBackStack()
         }
     }
 
@@ -38,7 +47,6 @@ class PasswordChangeActivity : AppCompatActivity() {
         val newPassword = binding.etNewPassword.text.toString()
         val confirmPassword = binding.etConfirmPassword.text.toString()
 
-        // 입력 필드 초기화
         binding.tilCurrentPassword.error = null
         binding.tilNewPassword.error = null
         binding.tilConfirmPassword.error = null
@@ -47,32 +55,21 @@ class PasswordChangeActivity : AppCompatActivity() {
             binding.tilCurrentPassword.error = "현재 비밀번호를 입력해주세요."
             return
         }
-
-        // 새 비밀번호 유효성 검사 (7자리 이상)
         if (newPassword.length < 7) {
             binding.tilNewPassword.error = "비밀번호는 7자리 이상이어야 합니다."
             return
         }
-
         if (newPassword != confirmPassword) {
             binding.tilConfirmPassword.error = "새 비밀번호가 일치하지 않습니다."
             return
         }
 
-        // 실제 비밀번호 변경 로직 구현 (서버 API 호출 등)
-        // 1. 현재 비밀번호가 올바른지 서버에 확인
-        // 2. 새 비밀번호로 변경 요청
-
-        Toast.makeText(this, "비밀번호 변경이 요청되었습니다.", Toast.LENGTH_SHORT).show()
-        // 성공 시 액티비티 종료
-        finish()
+        Toast.makeText(requireContext(), "비밀번호 변경이 요청되었습니다.", Toast.LENGTH_SHORT).show()
+        parentFragmentManager.popBackStack()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            finish() // 뒤로가기 버튼 클릭 시 액티비티 종료
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

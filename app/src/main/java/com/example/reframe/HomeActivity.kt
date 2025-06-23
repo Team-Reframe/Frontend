@@ -11,13 +11,13 @@ import java.util.Locale
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.example.reframe.api.ApiService
 import com.example.reframe.api.TotalResponse
 import com.example.reframe.api.RetrofitClient
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
 import com.example.reframe.api.StoreResponse
+import com.example.reframe.ui.profile.ProfileActivity
 
 
 class HomeActivity : AppCompatActivity() {

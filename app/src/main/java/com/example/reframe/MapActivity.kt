@@ -35,6 +35,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import com.example.reframe.ui.profile.ProfileActivity
 
 
 class MapActivity : AppCompatActivity() {

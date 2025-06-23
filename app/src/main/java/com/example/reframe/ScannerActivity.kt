@@ -3,6 +3,7 @@ package com.example.reframe
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.reframe.ui.profile.ProfileActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ScannerActivity : AppCompatActivity() {

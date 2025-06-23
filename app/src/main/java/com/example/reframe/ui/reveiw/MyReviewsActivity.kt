@@ -10,8 +10,6 @@ import com.example.reframe.data.dto.MyReviewResponse
 import com.example.reframe.databinding.ActivityMyReviewsBinding
 import com.example.reframe.ui.history.ReceiptViewModel
 import com.example.reframe.ui.scan.UiState
-import java.text.SimpleDateFormat
-import java.util.*
 
 class MyReviewsActivity : AppCompatActivity() {
 

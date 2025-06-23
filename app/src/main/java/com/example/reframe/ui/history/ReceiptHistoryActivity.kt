@@ -22,7 +22,7 @@ import android.view.ViewGroup
 import com.example.reframe.HomeActivity
 import com.example.reframe.MapActivity
 import com.example.reframe.ui.scan.ScanActivity
-import com.example.reframe.ProfileActivity
+import com.example.reframe.ui.profile.ProfileActivity
 import com.example.reframe.ui.reveiw.MyReviewsActivity
 
 class ReceiptHistoryActivity : AppCompatActivity() {
