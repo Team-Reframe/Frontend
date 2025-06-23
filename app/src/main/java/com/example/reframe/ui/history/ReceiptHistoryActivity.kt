@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.reframe.HomeActivity
 import com.example.reframe.MapActivity
-import com.example.reframe.ProfileActivity
+import com.example.reframe.ui.profile.ProfileActivity
 import com.example.reframe.R
 import com.example.reframe.databinding.ActivityReceiptHistoryBinding
 import com.example.reframe.ui.reveiw.MyReviewsFragment

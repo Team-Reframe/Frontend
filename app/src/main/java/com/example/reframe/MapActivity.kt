@@ -107,36 +107,19 @@ class MapActivity : AppCompatActivity() {
         KakaoMapSdk.init(this, "ee292f2b71c5823748b09bb6d9c5ba4c")
         setContentView(R.layout.activity_map)
 
-        // ✅ 네비게이션 바 세팅
+        // ✅ BottomNavigationView 코드 수정했습니다!
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigation.selectedItemId = R.id.nav_map
+        bottomNavigation.selectedItemId = R.id.nav_map // 지도 아이템을 선택된 상태로 표시
+
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
+                R.id.nav_home -> navigateTo(HomeActivity::class.java)
+                R.id.nav_receipt -> navigateTo(com.example.reframe.ui.history.ReceiptHistoryActivity::class.java)
+                R.id.nav_scan -> navigateTo(com.example.reframe.ui.scan.ScanActivity::class.java)
+                R.id.nav_map -> {
                     true
                 }
-                R.id.nav_receipt -> {
-                    startActivity(Intent(this, ReceiptActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
-                R.id.nav_scanner -> {
-                    startActivity(Intent(this, ScannerActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
-                R.id.nav_map -> true
-                R.id.nav_profile -> {
-                    startActivity(Intent(this, ProfileActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
+                R.id.nav_profile -> navigateTo(com.example.reframe.ui.profile.ProfileActivity::class.java)
                 else -> false
             }
         }
@@ -217,6 +200,17 @@ class MapActivity : AppCompatActivity() {
         return locationPermissions.all {
             ContextCompat.checkSelfPermission(this, it) == PackageManager.PERMISSION_GRANTED
         }
+    }
+
+    private fun navigateTo(activityClass: Class<*>): Boolean {
+        if (this.javaClass == activityClass) {
+            return true
+        }
+        val intent = Intent(this, activityClass)
+        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
+        overridePendingTransition(0, 0)
+        return true
     }
 
     @SuppressLint("MissingPermission")

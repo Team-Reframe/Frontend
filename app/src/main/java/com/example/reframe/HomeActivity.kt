@@ -117,43 +117,31 @@ class HomeActivity : AppCompatActivity() {
         })
 
 
-
-
-
-
-        // ✅ BottomNavigationView 설정은 그대로
+        // ✅ BottomNavigationView 코드 수정했습니다!
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigation.selectedItemId = R.id.nav_home
+        bottomNavigation.selectedItemId = R.id.nav_home // 홈 아이템을 선택된 상태로 표시
 
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> true
-                R.id.nav_receipt -> {
-                    startActivity(Intent(this, ReceiptActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
+                R.id.nav_home -> {
                     true
                 }
-                R.id.nav_scanner -> {
-                    startActivity(Intent(this, ScannerActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
-                R.id.nav_map -> {
-                    startActivity(Intent(this, MapActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
-                R.id.nav_profile -> {
-                    startActivity(Intent(this, ProfileActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    finish()
-                    true
-                }
+                R.id.nav_receipt -> navigateTo(com.example.reframe.ui.history.ReceiptHistoryActivity::class.java)
+                R.id.nav_scan -> navigateTo(com.example.reframe.ui.scan.ScanActivity::class.java)
+                R.id.nav_map -> navigateTo(MapActivity::class.java)
+                R.id.nav_profile -> navigateTo(com.example.reframe.ui.profile.ProfileActivity::class.java)
                 else -> false
             }
         }
+    }
+    private fun navigateTo(activityClass: Class<*>): Boolean {
+        if (this.javaClass == activityClass) {
+            return true
+        }
+        val intent = Intent(this, activityClass)
+        intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        startActivity(intent)
+        overridePendingTransition(0, 0)
+        return true
     }
 }

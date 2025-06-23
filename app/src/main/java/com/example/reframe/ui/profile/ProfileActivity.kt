@@ -7,6 +7,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.reframe.HomeActivity
+import com.example.reframe.LoginActivity
+import com.example.reframe.MapActivity
+import com.example.reframe.R
 import com.example.reframe.data.SessionManager
 import com.example.reframe.databinding.ActivityProfileBinding
 import com.example.reframe.ui.history.ReceiptHistoryFragment

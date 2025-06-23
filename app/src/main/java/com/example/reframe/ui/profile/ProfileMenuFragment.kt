@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.reframe.ProfileActivity
+import com.example.reframe.ui.profile.ProfileActivity
 import com.example.reframe.databinding.FragmentProfileMenuBinding
 
 class ProfileMenuFragment : Fragment() {
