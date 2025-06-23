@@ -1,17 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <!--인터넷 사용권한 주기 + GPS 정보 내꺼 가져오기-->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera.any" />
 
     <application
-
-
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -20,14 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reframe"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
 
-        tools:targetApi="31"
-        >
+        <!-- 카카오맵 API 키 -->
         <meta-data
             android:name="com.kakao.vectormap.KAKAO_MAP_KEY"
             android:value="ee292f2b71c5823748b09bb6d9c5ba4c"/>
 
-        <!-- SplashActivity를 런처로 등록 -->
+        <!-- 앱의 시작점 (Splash 화면) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -37,26 +36,18 @@
             </intent-filter>
         </activity>
 
-        <!-- 기타 액티비티들 -->
-        <activity android:name=".LoginActivity" android:exported="true" />
-        <activity android:name=".HomeActivity" android:exported="true" />
-        <activity android:name=".SignupSuccessActivity" android:exported="true" />
-        <activity android:name=".SignupActivity" android:exported="true" />
-        <activity android:name=".MainActivity" android:exported="true" />
-        <activity android:name=".MapActivity" android:exported="true" />
-        <activity android:name=".ui.profile.ProfileActivity" android:exported="true" />
-        <activity android:name=".ReceiptActivity" android:exported="true" />
-        <activity android:name=".ScannerActivity" android:exported="true" />
-        <activity android:name=".ui.profile.MyInfoFragment" />
-        <activity android:name=".ui.profile.PointHistoryFragment" />
-        <activity android:name=".ui.profile.PasswordChangeFragment" />
-        <activity android:name=".ui.profile.WithdrawalFragment" />
+        <!-- 단일 화면으로 존재하는 Activity -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".SignupSuccessActivity" />
         <activity android:name=".StoreDetailActivity" />
+        <activity android:name=".MapActivity" />
+
+        <!-- 하단 네비게이션 바의 각 탭을 담당하는 Activity -->
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".ui.history.ReceiptHistoryActivity" />
         <activity android:name=".ui.scan.ScanActivity" />
-        <activity android:name=".ui.scan.PreviewFragment" />
-        <activity android:name=".ui.scan.RewardFragment" />
-        <activity android:name=".ui.receipt.ReceiptHistoryActivity" />
-        <activity android:name=".ui.receipt.MyReviewsActivity" />
+        <activity android:name=".ui.profile.ProfileActivity" />
 
     </application>
 </manifest>

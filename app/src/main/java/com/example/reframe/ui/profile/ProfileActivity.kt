@@ -1,4 +1,4 @@
-package com.example.reframe
+package com.example.reframe.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
