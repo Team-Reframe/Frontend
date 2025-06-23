@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".ui.scan.PreviewActivity"> <!-- context를 Activity로 변경 -->
+    tools:context=".ui.scan.PreviewFragment">
 
     <ImageView
         android:id="@+id/previewImageView"

@@ -6,58 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.scan.ScanActivity">
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/previewView"
+    <!-- 프래그먼트가 표시될 컨테이너 -->
+    <FrameLayout
+        android:id="@+id/scan_fragment_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_controls"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/bottom_controls"
+    <!-- 하단 네비게이션 바 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/BottomNavTheme"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#1C1C1E"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/galleryButton"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="갤러리"
-            android:padding="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_gallery" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/captureButton"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:background="@drawable/ic_camera_shutter"
-            android:contentDescription="사진 촬영" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
-        <View
-            android:layout_width="56dp"
-            android:layout_height="56dp" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
