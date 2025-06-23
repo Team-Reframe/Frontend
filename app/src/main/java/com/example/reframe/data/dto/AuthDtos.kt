@@ -26,3 +26,11 @@ data class LoginResponse(
     val name: String,
     val memberId: Long // API 명세에 따라 추가
 )
+
+data class UserInfoResponse(
+    val name: String,
+    val englishName: String?,
+    val birthDate: String?,
+    val phoneNumber: String?,
+    val email: String
+)

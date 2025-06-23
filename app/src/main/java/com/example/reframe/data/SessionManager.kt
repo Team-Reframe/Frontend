@@ -29,4 +29,10 @@ object SessionManager {
     fun getToken(context: Context): String? {
         return getPreferences(context).getString(KEY_AUTH_TOKEN, null)
     }
+
+    fun clearData(context: Context) {
+        val editor = getPreferences(context).edit()
+        editor.clear()
+        editor.apply()
+    }
 }
