@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -14,7 +16,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -26,9 +27,6 @@ public final class ActivityMyInfoBinding implements ViewBinding {
 
   @NonNull
   public final AppBarLayout appBarLayout;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final CardView cvProfileContainer;
@@ -60,16 +58,22 @@ public final class ActivityMyInfoBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbarMyInfo;
 
+  @NonNull
+  public final RelativeLayout toolbarTitleContainer;
+
+  @NonNull
+  public final TextView tvToolbarUserName;
+
   private ActivityMyInfoBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppBarLayout appBarLayout, @NonNull BottomNavigationView bottomNavigation,
-      @NonNull CardView cvProfileContainer, @NonNull FloatingActionButton fabEditProfileImage,
+      @NonNull AppBarLayout appBarLayout, @NonNull CardView cvProfileContainer,
+      @NonNull FloatingActionButton fabEditProfileImage,
       @NonNull ListItemMyInfoBinding itemBirthDate, @NonNull ListItemMyInfoBinding itemEmail,
       @NonNull ListItemMyInfoBinding itemEnglishName, @NonNull ListItemMyInfoBinding itemName,
       @NonNull ListItemMyInfoBinding itemPassword, @NonNull ListItemMyInfoBinding itemPhoneNumber,
-      @NonNull ImageView ivProfileImage, @NonNull Toolbar toolbarMyInfo) {
+      @NonNull ImageView ivProfileImage, @NonNull Toolbar toolbarMyInfo,
+      @NonNull RelativeLayout toolbarTitleContainer, @NonNull TextView tvToolbarUserName) {
     this.rootView = rootView;
     this.appBarLayout = appBarLayout;
-    this.bottomNavigation = bottomNavigation;
     this.cvProfileContainer = cvProfileContainer;
     this.fabEditProfileImage = fabEditProfileImage;
     this.itemBirthDate = itemBirthDate;
@@ -80,6 +84,8 @@ public final class ActivityMyInfoBinding implements ViewBinding {
     this.itemPhoneNumber = itemPhoneNumber;
     this.ivProfileImage = ivProfileImage;
     this.toolbarMyInfo = toolbarMyInfo;
+    this.toolbarTitleContainer = toolbarTitleContainer;
+    this.tvToolbarUserName = tvToolbarUserName;
   }
 
   @Override
@@ -112,12 +118,6 @@ public final class ActivityMyInfoBinding implements ViewBinding {
       id = R.id.appBarLayout;
       AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
       if (appBarLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
         break missingId;
       }
 
@@ -187,10 +187,22 @@ public final class ActivityMyInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMyInfoBinding((CoordinatorLayout) rootView, appBarLayout, bottomNavigation,
+      id = R.id.toolbar_title_container;
+      RelativeLayout toolbarTitleContainer = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarTitleContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_toolbar_user_name;
+      TextView tvToolbarUserName = ViewBindings.findChildViewById(rootView, id);
+      if (tvToolbarUserName == null) {
+        break missingId;
+      }
+
+      return new ActivityMyInfoBinding((CoordinatorLayout) rootView, appBarLayout,
           cvProfileContainer, fabEditProfileImage, binding_itemBirthDate, binding_itemEmail,
           binding_itemEnglishName, binding_itemName, binding_itemPassword, binding_itemPhoneNumber,
-          ivProfileImage, toolbarMyInfo);
+          ivProfileImage, toolbarMyInfo, toolbarTitleContainer, tvToolbarUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

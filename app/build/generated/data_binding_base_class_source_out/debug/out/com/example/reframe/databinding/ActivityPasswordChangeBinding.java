@@ -13,7 +13,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -23,9 +22,6 @@ import java.lang.String;
 public final class ActivityPasswordChangeBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final Button btnChangePassword;
@@ -64,15 +60,13 @@ public final class ActivityPasswordChangeBinding implements ViewBinding {
   public final TextView tvTitle;
 
   private ActivityPasswordChangeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnChangePassword,
-      @NonNull TextInputEditText etConfirmPassword, @NonNull TextInputEditText etCurrentPassword,
-      @NonNull TextInputEditText etNewPassword, @NonNull TextInputLayout tilConfirmPassword,
-      @NonNull TextInputLayout tilCurrentPassword, @NonNull TextInputLayout tilNewPassword,
-      @NonNull MaterialToolbar toolbar, @NonNull TextView tvConfirmPasswordLabel,
-      @NonNull TextView tvCurrentPasswordLabel, @NonNull TextView tvNewPasswordLabel,
-      @NonNull TextView tvTitle) {
+      @NonNull Button btnChangePassword, @NonNull TextInputEditText etConfirmPassword,
+      @NonNull TextInputEditText etCurrentPassword, @NonNull TextInputEditText etNewPassword,
+      @NonNull TextInputLayout tilConfirmPassword, @NonNull TextInputLayout tilCurrentPassword,
+      @NonNull TextInputLayout tilNewPassword, @NonNull MaterialToolbar toolbar,
+      @NonNull TextView tvConfirmPasswordLabel, @NonNull TextView tvCurrentPasswordLabel,
+      @NonNull TextView tvNewPasswordLabel, @NonNull TextView tvTitle) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
     this.btnChangePassword = btnChangePassword;
     this.etConfirmPassword = etConfirmPassword;
     this.etCurrentPassword = etCurrentPassword;
@@ -114,12 +108,6 @@ public final class ActivityPasswordChangeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
-        break missingId;
-      }
-
       id = R.id.btn_change_password;
       Button btnChangePassword = ViewBindings.findChildViewById(rootView, id);
       if (btnChangePassword == null) {
@@ -192,9 +180,9 @@ public final class ActivityPasswordChangeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPasswordChangeBinding((ConstraintLayout) rootView, bottomNavigation,
-          btnChangePassword, etConfirmPassword, etCurrentPassword, etNewPassword,
-          tilConfirmPassword, tilCurrentPassword, tilNewPassword, toolbar, tvConfirmPasswordLabel,
+      return new ActivityPasswordChangeBinding((ConstraintLayout) rootView, btnChangePassword,
+          etConfirmPassword, etCurrentPassword, etNewPassword, tilConfirmPassword,
+          tilCurrentPassword, tilNewPassword, toolbar, tvConfirmPasswordLabel,
           tvCurrentPasswordLabel, tvNewPasswordLabel, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);

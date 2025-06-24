@@ -7,10 +7,14 @@
     <uses-sdk
         android:minSdkVersion="34"
         android:targetSdkVersion="35" />
+
     <!-- 인터넷 사용권한 주기 + GPS 정보 내꺼 가져오기 -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
 
     <permission
         android:name="com.example.reframe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -36,11 +40,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.Reframe"
         android:usesCleartextTraffic="true" >
+
+        <!-- 카카오맵 API 키 -->
         <meta-data
             android:name="com.kakao.vectormap.KAKAO_MAP_KEY"
             android:value="ee292f2b71c5823748b09bb6d9c5ba4c" />
 
-        <!-- SplashActivity를 런처로 등록 -->
+        <!-- 앱의 시작점 (Splash 화면) -->
         <activity
             android:name="com.example.reframe.SplashActivity"
             android:exported="true" >
@@ -51,39 +57,28 @@
             </intent-filter>
         </activity>
 
-        <!-- 기타 액티비티들 -->
-        <activity
-            android:name="com.example.reframe.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.SignupSuccessActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.SignupActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.MainActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.MapActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.ReceiptActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.reframe.ScannerActivity"
-            android:exported="true" />
-        <activity android:name="com.example.reframe.MyInfoActivity" />
-        <activity android:name="com.example.reframe.PointHistoryActivity" />
-        <activity android:name="com.example.reframe.PasswordChangeActivity" />
-        <activity android:name="com.example.reframe.WithdrawalActivity" />
+        <!-- 단일 화면으로 존재하는 Activity -->
+        <activity android:name="com.example.reframe.LoginActivity" />
+        <activity android:name="com.example.reframe.SignupActivity" />
+        <activity android:name="com.example.reframe.SignupSuccessActivity" />
         <activity android:name="com.example.reframe.StoreDetailActivity" />
+        <activity android:name="com.example.reframe.MapActivity" />
+
+        <!-- 하단 네비게이션 바의 각 탭을 담당하는 Activity -->
+        <activity android:name="com.example.reframe.HomeActivity" />
+        <activity android:name="com.example.reframe.ui.history.ReceiptHistoryActivity" />
+        <activity android:name="com.example.reframe.ui.scan.ScanActivity" />
+        <activity android:name="com.example.reframe.ui.profile.ProfileActivity" />
+
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -107,6 +102,13 @@
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

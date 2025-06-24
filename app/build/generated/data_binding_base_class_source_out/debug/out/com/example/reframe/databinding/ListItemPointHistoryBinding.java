@@ -23,16 +23,16 @@ public final class ListItemPointHistoryBinding implements ViewBinding {
   public final TextView tvDate;
 
   @NonNull
-  public final TextView tvPointChange;
+  public final TextView tvPoints;
 
   @NonNull
   public final TextView tvStoreName;
 
   private ListItemPointHistoryBinding(@NonNull ConstraintLayout rootView, @NonNull TextView tvDate,
-      @NonNull TextView tvPointChange, @NonNull TextView tvStoreName) {
+      @NonNull TextView tvPoints, @NonNull TextView tvStoreName) {
     this.rootView = rootView;
     this.tvDate = tvDate;
-    this.tvPointChange = tvPointChange;
+    this.tvPoints = tvPoints;
     this.tvStoreName = tvStoreName;
   }
 
@@ -69,9 +69,9 @@ public final class ListItemPointHistoryBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_point_change;
-      TextView tvPointChange = ViewBindings.findChildViewById(rootView, id);
-      if (tvPointChange == null) {
+      id = R.id.tv_points;
+      TextView tvPoints = ViewBindings.findChildViewById(rootView, id);
+      if (tvPoints == null) {
         break missingId;
       }
 
@@ -81,7 +81,7 @@ public final class ListItemPointHistoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListItemPointHistoryBinding((ConstraintLayout) rootView, tvDate, tvPointChange,
+      return new ListItemPointHistoryBinding((ConstraintLayout) rootView, tvDate, tvPoints,
           tvStoreName);
     }
     String missingId = rootView.getResources().getResourceName(id);

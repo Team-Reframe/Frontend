@@ -15,7 +15,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,9 +22,6 @@ import java.lang.String;
 public final class ActivityPointHistoryBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final View divider;
@@ -69,8 +65,7 @@ public final class ActivityPointHistoryBinding implements ViewBinding {
   @NonNull
   public final TextView tvUserPointTitle;
 
-  private ActivityPointHistoryBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull View divider,
+  private ActivityPointHistoryBinding(@NonNull ConstraintLayout rootView, @NonNull View divider,
       @NonNull ImageView ivFilter, @NonNull RecyclerView rvPointHistory,
       @NonNull ScrollView scrollView, @NonNull MaterialToolbar toolbar,
       @NonNull TextView toolbarTitle, @NonNull TextView tvExpiringPointAmount,
@@ -79,7 +74,6 @@ public final class ActivityPointHistoryBinding implements ViewBinding {
       @NonNull TextView tvPeriodSort, @NonNull TextView tvUserPointAmount,
       @NonNull TextView tvUserPointTitle) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
     this.divider = divider;
     this.ivFilter = ivFilter;
     this.rvPointHistory = rvPointHistory;
@@ -123,12 +117,6 @@ public final class ActivityPointHistoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
-        break missingId;
-      }
-
       id = R.id.divider;
       View divider = ViewBindings.findChildViewById(rootView, id);
       if (divider == null) {
@@ -213,8 +201,8 @@ public final class ActivityPointHistoryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPointHistoryBinding((ConstraintLayout) rootView, bottomNavigation, divider,
-          ivFilter, rvPointHistory, scrollView, toolbar, toolbarTitle, tvExpiringPointAmount,
+      return new ActivityPointHistoryBinding((ConstraintLayout) rootView, divider, ivFilter,
+          rvPointHistory, scrollView, toolbar, toolbarTitle, tvExpiringPointAmount,
           tvExpiringPointLabel, tvExpiryDate, tvExpiryDateLabel, tvPeriodDate, tvPeriodSort,
           tvUserPointAmount, tvUserPointTitle);
     }

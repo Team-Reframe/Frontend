@@ -14,7 +14,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.reframe.R;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,9 +21,6 @@ import java.lang.String;
 public final class ActivityWithdrawalBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigation;
 
   @NonNull
   public final Button btnWithdraw;
@@ -50,13 +46,11 @@ public final class ActivityWithdrawalBinding implements ViewBinding {
   @NonNull
   public final TextView tvWarning;
 
-  private ActivityWithdrawalBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnWithdraw,
+  private ActivityWithdrawalBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnWithdraw,
       @NonNull EditText etPassword, @NonNull MaterialToolbar toolbar, @NonNull TextView tvInfo1,
       @NonNull TextView tvInfo2, @NonNull TextView tvPasswordLabel, @NonNull TextView tvTitle,
       @NonNull TextView tvWarning) {
     this.rootView = rootView;
-    this.bottomNavigation = bottomNavigation;
     this.btnWithdraw = btnWithdraw;
     this.etPassword = etPassword;
     this.toolbar = toolbar;
@@ -94,12 +88,6 @@ public final class ActivityWithdrawalBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigation == null) {
-        break missingId;
-      }
-
       id = R.id.btn_withdraw;
       Button btnWithdraw = ViewBindings.findChildViewById(rootView, id);
       if (btnWithdraw == null) {
@@ -148,8 +136,8 @@ public final class ActivityWithdrawalBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityWithdrawalBinding((ConstraintLayout) rootView, bottomNavigation,
-          btnWithdraw, etPassword, toolbar, tvInfo1, tvInfo2, tvPasswordLabel, tvTitle, tvWarning);
+      return new ActivityWithdrawalBinding((ConstraintLayout) rootView, btnWithdraw, etPassword,
+          toolbar, tvInfo1, tvInfo2, tvPasswordLabel, tvTitle, tvWarning);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

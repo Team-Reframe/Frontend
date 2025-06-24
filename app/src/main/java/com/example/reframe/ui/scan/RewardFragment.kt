@@ -46,18 +46,14 @@ class RewardFragment : Fragment() {
             if (!isBoxClicked && purchaseId != -1L) {
                 isBoxClicked = true
                 val memberId = SessionManager.getMemberId(requireContext())
-                if (memberId != -1L) {
-                    viewModel.claimReward(purchaseId, memberId)
-                } else {
-                    Toast.makeText(requireContext(), "리워드 요청 실패: 사용자 정보를 찾을 수 없습니다.", Toast.LENGTH_SHORT).show()
-                    isBoxClicked = false
-                }
+                viewModel.claimReward(purchaseId, memberId)
             }
         }
-        observeViewModel()
     }
 
-    private fun observeViewModel() {
+
+
+        private fun observeViewModel() {
         viewModel.rewardState.observe(viewLifecycleOwner) { state ->
             when (state) {
                 is UiState.Loading -> { /* 로딩 UI 처리 */ }
@@ -66,7 +62,6 @@ class RewardFragment : Fragment() {
                 }
                 is UiState.Error -> {
                     isBoxClicked = false
-                    Toast.makeText(requireContext(), "리워드 요청 실패: ${state.message}", Toast.LENGTH_LONG).show()
                 }
             }
         }

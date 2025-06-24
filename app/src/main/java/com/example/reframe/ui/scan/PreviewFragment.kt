@@ -50,13 +50,11 @@ class PreviewFragment : Fragment() {
 
         binding.registerButton.setOnClickListener {
             val memberId = SessionManager.getMemberId(requireContext())
-            if (memberId != -1L && imageUri != null) {
+            if (imageUri != null) {
                 viewModel.uploadReceipt(requireContext(), memberId, imageUri!!)
-            } else {
-                Toast.makeText(requireContext(), "사용자 정보 또는 이미지가 유효하지 않습니다.", Toast.LENGTH_SHORT).show()
             }
+            // else 토스트 제거
         }
-        observeViewModel()
     }
 
     private fun observeViewModel() {
@@ -77,7 +75,6 @@ class PreviewFragment : Fragment() {
                 is UiState.Error -> {
                     binding.progressBar.isVisible = false
                     binding.registerButton.isEnabled = true
-                    Toast.makeText(requireContext(), "업로드 실패: ${state.message}", Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.reframe.app-mergeDebugResources-35:/values-v24/values-v24.xml",
+            "outputFile": "com.example.reframe.app-mergeDebugResources-59:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dnwls\\.gradle\\caches\\8.10.2\\transforms\\2f180dbf616c0bcf385e6ef4a4d53fb1\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\my\\.gradle\\caches\\8.10.2\\transforms\\6130a944f92b3e1a2b8b08a189d2d003\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\dnwls\\.gradle\\caches\\8.10.2\\transforms\\ed0e74768d903b6ac59adb56167f6fd0\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\my\\.gradle\\caches\\8.10.2\\transforms\\28919c21aed19fa6aba73c571758063d\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

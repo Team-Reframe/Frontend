@@ -17,6 +17,7 @@
     <color name="helper_text_gray">#8A8A8E</color>
     <color name="label_blue">#0D6EFA</color>
     <color name="light_blue_background">#F0F4FF</color>
+    <color name="main_blue">#004098</color>
     <color name="my_info_background">#F5F5F5</color>
     <color name="my_info_divider_color">#E0E0E0</color>
     <color name="my_info_edit_fab_bg">#FF7D45</color>
@@ -82,9 +83,7 @@
     <string name="title_activity_password_security">비밀번호 변경</string>
     <string name="title_activity_point_history">포인트 내역</string>
     <string name="title_activity_withdrawal">회원탈퇴</string>
-    <string name="user_point_title">
-        <![CDATA[<font color="#FFF763C">박수연</font>님의 포인트]]>
-    </string>
+    <string name="user_point_title"><![CDATA[<b>%1$s</b>님의 포인트]]></string>
     <string name="welcome_title">환영합니다!</string>
     <style name="Base.Theme.Reframe" parent="Theme.Material3.DayNight.NoActionBar">
         

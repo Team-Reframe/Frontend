@@ -4,9 +4,7 @@ package com.example.reframe.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -26,67 +24,18 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigation;
 
   @NonNull
-  public final ImageView ivLogo;
-
-  @NonNull
-  public final ImageView ivPayment;
-
-  @NonNull
-  public final LinearLayout linearLayout;
+  public final FrameLayout flProfileContainer;
 
   @NonNull
   public final CoordinatorLayout profileLayout;
 
-  @NonNull
-  public final TextView tvAccountStatus;
-
-  @NonNull
-  public final TextView tvCustomerCenter;
-
-  @NonNull
-  public final TextView tvHelp;
-
-  @NonNull
-  public final TextView tvLogout;
-
-  @NonNull
-  public final TextView tvMyInfo;
-
-  @NonNull
-  public final TextView tvPasswordChange;
-
-  @NonNull
-  public final TextView tvPointHistory;
-
-  @NonNull
-  public final TextView tvReportProblem;
-
-  @NonNull
-  public final TextView tvWithdrawal;
-
   private ActivityProfileBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull ImageView ivLogo,
-      @NonNull ImageView ivPayment, @NonNull LinearLayout linearLayout,
-      @NonNull CoordinatorLayout profileLayout, @NonNull TextView tvAccountStatus,
-      @NonNull TextView tvCustomerCenter, @NonNull TextView tvHelp, @NonNull TextView tvLogout,
-      @NonNull TextView tvMyInfo, @NonNull TextView tvPasswordChange,
-      @NonNull TextView tvPointHistory, @NonNull TextView tvReportProblem,
-      @NonNull TextView tvWithdrawal) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull FrameLayout flProfileContainer,
+      @NonNull CoordinatorLayout profileLayout) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
-    this.ivLogo = ivLogo;
-    this.ivPayment = ivPayment;
-    this.linearLayout = linearLayout;
+    this.flProfileContainer = flProfileContainer;
     this.profileLayout = profileLayout;
-    this.tvAccountStatus = tvAccountStatus;
-    this.tvCustomerCenter = tvCustomerCenter;
-    this.tvHelp = tvHelp;
-    this.tvLogout = tvLogout;
-    this.tvMyInfo = tvMyInfo;
-    this.tvPasswordChange = tvPasswordChange;
-    this.tvPointHistory = tvPointHistory;
-    this.tvReportProblem = tvReportProblem;
-    this.tvWithdrawal = tvWithdrawal;
   }
 
   @Override
@@ -122,83 +71,16 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.iv_logo;
-      ImageView ivLogo = ViewBindings.findChildViewById(rootView, id);
-      if (ivLogo == null) {
-        break missingId;
-      }
-
-      id = R.id.iv_payment;
-      ImageView ivPayment = ViewBindings.findChildViewById(rootView, id);
-      if (ivPayment == null) {
-        break missingId;
-      }
-
-      id = R.id.linearLayout;
-      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout == null) {
+      id = R.id.fl_profile_container;
+      FrameLayout flProfileContainer = ViewBindings.findChildViewById(rootView, id);
+      if (flProfileContainer == null) {
         break missingId;
       }
 
       CoordinatorLayout profileLayout = (CoordinatorLayout) rootView;
 
-      id = R.id.tv_account_status;
-      TextView tvAccountStatus = ViewBindings.findChildViewById(rootView, id);
-      if (tvAccountStatus == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_customer_center;
-      TextView tvCustomerCenter = ViewBindings.findChildViewById(rootView, id);
-      if (tvCustomerCenter == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_help;
-      TextView tvHelp = ViewBindings.findChildViewById(rootView, id);
-      if (tvHelp == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_logout;
-      TextView tvLogout = ViewBindings.findChildViewById(rootView, id);
-      if (tvLogout == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_my_info;
-      TextView tvMyInfo = ViewBindings.findChildViewById(rootView, id);
-      if (tvMyInfo == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_password_change;
-      TextView tvPasswordChange = ViewBindings.findChildViewById(rootView, id);
-      if (tvPasswordChange == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_point_history;
-      TextView tvPointHistory = ViewBindings.findChildViewById(rootView, id);
-      if (tvPointHistory == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_report_problem;
-      TextView tvReportProblem = ViewBindings.findChildViewById(rootView, id);
-      if (tvReportProblem == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_withdrawal;
-      TextView tvWithdrawal = ViewBindings.findChildViewById(rootView, id);
-      if (tvWithdrawal == null) {
-        break missingId;
-      }
-
-      return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomNavigation, ivLogo,
-          ivPayment, linearLayout, profileLayout, tvAccountStatus, tvCustomerCenter, tvHelp,
-          tvLogout, tvMyInfo, tvPasswordChange, tvPointHistory, tvReportProblem, tvWithdrawal);
+      return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomNavigation,
+          flProfileContainer, profileLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
