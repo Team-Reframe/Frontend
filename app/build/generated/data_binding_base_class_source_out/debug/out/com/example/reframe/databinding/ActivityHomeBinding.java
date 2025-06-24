@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -33,6 +34,15 @@ public final class ActivityHomeBinding implements ViewBinding {
 
   @NonNull
   public final Button btnRightTransparent;
+
+  @NonNull
+  public final CardView cardCommunity1;
+
+  @NonNull
+  public final CardView cardCommunity2;
+
+  @NonNull
+  public final ConstraintLayout communityContainer;
 
   @NonNull
   public final FrameLayout container;
@@ -68,6 +78,12 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final ConstraintLayout topBar;
 
   @NonNull
+  public final TextView tvCommunityMore;
+
+  @NonNull
+  public final TextView tvCommunityTitle;
+
+  @NonNull
   public final TextView tvGreeting;
 
   @NonNull
@@ -90,19 +106,25 @@ public final class ActivityHomeBinding implements ViewBinding {
 
   private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavigation, @NonNull Button btnLeftTransparent,
-      @NonNull Button btnRightTransparent, @NonNull FrameLayout container,
-      @NonNull ConstraintLayout homeLayout, @NonNull RecyclerView homeStoreList,
-      @NonNull ImageView imgAlarm, @NonNull ImageView imgGlasses, @NonNull ImageView imgLogo,
-      @NonNull ImageView imgPayment, @NonNull ImageView imgPointCard,
-      @NonNull LinearLayout nameGreetingLayout, @NonNull ConstraintLayout pointCard,
-      @NonNull ConstraintLayout topBar, @NonNull TextView tvGreeting,
-      @NonNull TextView tvHomeBestMore, @NonNull TextView tvHomeBestSub,
-      @NonNull TextView tvHomeBestTitle, @NonNull TextView tvPointAmount,
-      @NonNull TextView tvPointDate, @NonNull TextView tvUserName) {
+      @NonNull Button btnRightTransparent, @NonNull CardView cardCommunity1,
+      @NonNull CardView cardCommunity2, @NonNull ConstraintLayout communityContainer,
+      @NonNull FrameLayout container, @NonNull ConstraintLayout homeLayout,
+      @NonNull RecyclerView homeStoreList, @NonNull ImageView imgAlarm,
+      @NonNull ImageView imgGlasses, @NonNull ImageView imgLogo, @NonNull ImageView imgPayment,
+      @NonNull ImageView imgPointCard, @NonNull LinearLayout nameGreetingLayout,
+      @NonNull ConstraintLayout pointCard, @NonNull ConstraintLayout topBar,
+      @NonNull TextView tvCommunityMore, @NonNull TextView tvCommunityTitle,
+      @NonNull TextView tvGreeting, @NonNull TextView tvHomeBestMore,
+      @NonNull TextView tvHomeBestSub, @NonNull TextView tvHomeBestTitle,
+      @NonNull TextView tvPointAmount, @NonNull TextView tvPointDate,
+      @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.btnLeftTransparent = btnLeftTransparent;
     this.btnRightTransparent = btnRightTransparent;
+    this.cardCommunity1 = cardCommunity1;
+    this.cardCommunity2 = cardCommunity2;
+    this.communityContainer = communityContainer;
     this.container = container;
     this.homeLayout = homeLayout;
     this.homeStoreList = homeStoreList;
@@ -114,6 +136,8 @@ public final class ActivityHomeBinding implements ViewBinding {
     this.nameGreetingLayout = nameGreetingLayout;
     this.pointCard = pointCard;
     this.topBar = topBar;
+    this.tvCommunityMore = tvCommunityMore;
+    this.tvCommunityTitle = tvCommunityTitle;
     this.tvGreeting = tvGreeting;
     this.tvHomeBestMore = tvHomeBestMore;
     this.tvHomeBestSub = tvHomeBestSub;
@@ -165,6 +189,24 @@ public final class ActivityHomeBinding implements ViewBinding {
       id = R.id.btnRightTransparent;
       Button btnRightTransparent = ViewBindings.findChildViewById(rootView, id);
       if (btnRightTransparent == null) {
+        break missingId;
+      }
+
+      id = R.id.cardCommunity1;
+      CardView cardCommunity1 = ViewBindings.findChildViewById(rootView, id);
+      if (cardCommunity1 == null) {
+        break missingId;
+      }
+
+      id = R.id.cardCommunity2;
+      CardView cardCommunity2 = ViewBindings.findChildViewById(rootView, id);
+      if (cardCommunity2 == null) {
+        break missingId;
+      }
+
+      id = R.id.communityContainer;
+      ConstraintLayout communityContainer = ViewBindings.findChildViewById(rootView, id);
+      if (communityContainer == null) {
         break missingId;
       }
 
@@ -230,6 +272,18 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvCommunityMore;
+      TextView tvCommunityMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvCommunityMore == null) {
+        break missingId;
+      }
+
+      id = R.id.tvCommunityTitle;
+      TextView tvCommunityTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvCommunityTitle == null) {
+        break missingId;
+      }
+
       id = R.id.tvGreeting;
       TextView tvGreeting = ViewBindings.findChildViewById(rootView, id);
       if (tvGreeting == null) {
@@ -273,10 +327,11 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
 
       return new ActivityHomeBinding((ConstraintLayout) rootView, bottomNavigation,
-          btnLeftTransparent, btnRightTransparent, container, homeLayout, homeStoreList, imgAlarm,
-          imgGlasses, imgLogo, imgPayment, imgPointCard, nameGreetingLayout, pointCard, topBar,
-          tvGreeting, tvHomeBestMore, tvHomeBestSub, tvHomeBestTitle, tvPointAmount, tvPointDate,
-          tvUserName);
+          btnLeftTransparent, btnRightTransparent, cardCommunity1, cardCommunity2,
+          communityContainer, container, homeLayout, homeStoreList, imgAlarm, imgGlasses, imgLogo,
+          imgPayment, imgPointCard, nameGreetingLayout, pointCard, topBar, tvCommunityMore,
+          tvCommunityTitle, tvGreeting, tvHomeBestMore, tvHomeBestSub, tvHomeBestTitle,
+          tvPointAmount, tvPointDate, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

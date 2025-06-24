@@ -69,6 +69,8 @@ drawable ic_arrow_forward_ios
 drawable ic_building
 drawable ic_camera_shutter
 drawable ic_coin
+drawable ic_community_11
+drawable ic_community_22
 drawable ic_edit_pencil
 drawable ic_gallery
 drawable ic_gift_box_closed
@@ -132,9 +134,12 @@ id buttonContainer
 id buttonLogin
 id buttonSignup
 id captureButton
+id cardCommunity1
+id cardCommunity2
 id cbAutoLogin
 id cbSaveId
 id checkboxContainer
+id communityContainer
 id container
 id cv_profile_container
 id divider
@@ -225,6 +230,8 @@ id toolbar_my_info
 id toolbar_title
 id toolbar_title_container
 id topBar
+id tvCommunityMore
+id tvCommunityTitle
 id tvFindId
 id tvGreeting
 id tvHomeBestMore

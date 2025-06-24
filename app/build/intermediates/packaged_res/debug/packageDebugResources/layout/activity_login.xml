@@ -24,8 +24,8 @@
     <!-- 2. 아이디 입력 -->
     <EditText
         android:id="@+id/etId"
-        android:layout_width="361dp"
-        android:layout_height="50dp"
+        android:layout_width="328dp"
+        android:layout_height="42dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/bg_input_rounded"
         android:hint="아이디를 입력해주세요"
@@ -42,8 +42,8 @@
     <!-- 3. 비밀번호 입력 (크기 맞춤) -->
     <EditText
         android:id="@+id/etPw"
-        android:layout_width="361dp"
-        android:layout_height="50dp"
+        android:layout_width="323dp"
+        android:layout_height="42dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_input_rounded"
         android:hint="비밀번호를 입력해주세요"
@@ -71,8 +71,8 @@
     <!-- 5. 로그인 버튼 이미지 -->
     <ImageView
         android:id="@+id/btnLogin"
-        android:layout_width="364dp"
-        android:layout_height="49dp"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:clickable="true"
         android:contentDescription="로그인 버튼"
@@ -86,8 +86,8 @@
     <!-- 6. 회원가입 버튼 이미지 (크기 맞춤) -->
     <ImageView
         android:id="@+id/btnSignup"
-        android:layout_width="364dp"
-        android:layout_height="49dp"
+        android:layout_width="336dp"
+        android:layout_height="51dp"
         android:layout_marginTop="12dp"
         android:clickable="true"
         android:contentDescription="회원가입 버튼"
